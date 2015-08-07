@@ -1,0 +1,131 @@
+// -----------------------------
+// Menu
+// -----------------------------
+
+
+// Menu Sections
+
+.widget.menusections {
+	margin: 0 0 30px;
+	ul {
+		padding: 1em!important;
+		text-align: center;
+		li {
+			@media @mobile {
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+	a {
+		color: @color-swatch4;
+		&:hover {
+			color: @color-swatch2;
+			text-decoration: none;
+		}
+	}
+}
+
+
+// Menu Sections
+
+.menu-header {
+	padding: 2em 0;
+}
+
+// Main Menu
+
+.widget.menu {
+	.main.wrapper {
+		width: 100%;
+		margin: 0 0 1.5em;
+		padding-bottom: 30px;
+	}
+	.menu-name,
+	.menu-description,
+	.menu-note,
+	.menu-subsection-name,
+	.menu-subsection-description {
+		text-align: center;
+		padding-bottom: 0;
+	}
+	.menu-subsection {
+		padding: 0;
+	}
+	.menu-item-image-wrap {
+		//background-image: none!important;
+		background-size: cover;
+		background-position: center;
+		height: 200px;
+		margin: 10px 0;
+		img {
+			display: none;
+		}
+	}
+	.menu-item-name {
+		font-weight: @font-swatch2-font-weight;
+	}
+	.menu-item-description {
+		font-size: bkscale(@font-swatch5-font-size, 0.95);
+	}
+}
+
+
+// Promoted Item
+
+.widget.menusections ul,
+.menu .menu-items li.menu-item-promoted,
+.menu-subsection-promoted {
+	padding: 2em;
+	border: 2px solid darken(@color-swatch1,10%);
+}
+
+
+// Nutritional Info
+
+.menu-item-nutritional-title {
+	font-size: bkscale(@font-swatch5-font-size,0.8);
+	letter-spacing: @font-swatch7-letter-spacing;
+	&:before {
+		border-top: 1px solid lighten(@color-swatch5, 35%);
+		content: "";
+		display: block;
+		margin-top: 8px;
+		margin-bottom: 15px;
+		width: 65px;
+	}
+}
+.menu-item-nutritional-prop {
+	font-size: bkscale(@font-swatch5-font-size,0.85);
+	line-height: bkscale(@font-swatch5-line-height,0.85);
+	margin-bottom: 10px;
+}
+
+
+// Price 
+
+.standard-price {
+	color: @font-swatch4-color;
+	font-family: @font-swatch4-font-family;
+	font-size: @font-swatch4-font-size;
+	font-weight: @font-swatch4-font-weight;
+	line-height: @font-swatch4-line-height;
+	letter-spacing: @font-swatch4-letter-spacing;
+}
+
+
+// Dietary Icons
+
+.menu .menu-section-item-dietary-props .dietary-icon {
+	border-radius: 0;
+	text-transform: uppercase;
+	padding: 1px 10px 2px;
+	background-color: @color-swatch1;
+	border: 2px solid lighten(@color-swatch3,15%);
+	color: @color-swatch3;
+	font-family: @font-swatch7-font-family;
+	font-size: 11px;
+	font-weight: @font-swatch7-font-weight;
+	line-height: @font-swatch7-line-height;
+	letter-spacing: @font-swatch7-letter-spacing;
+}

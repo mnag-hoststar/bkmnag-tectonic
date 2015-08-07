@@ -1,0 +1,138 @@
+{
+    "name":"Tectonic",
+    "thumbnail":"tectonic.png",
+    "screenshot":"tectonic.png",
+    "templateType":"standard",
+    "tags": { "en": ["business", "modern", "dark", "social", "contrast", "space"] },
+    "pageTypes":["home"],
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#12242d",
+            "color3":"#0f475c",
+            "color4":"#383838",
+            "color5":"#696969",
+            "color6":"#000000",
+            "color7":"#ffffff"
+        },
+        "Swatch 2": {
+            "color1":"#f4f4f4",
+            "color2":"#161616",
+            "color3":"#9a6a91",
+            "color4":"#3e3e3e",
+            "color5":"#707070",
+            "color6":"#000000",
+            "color7":"#ffffff"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#363636",
+            "color3":"#63874a",
+            "color4":"#3c3c3c",
+            "color5":"#636363",
+            "color6":"#1e1e1e",
+            "color7":"#fafafa"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#2c2034",
+            "color3":"#bb9869",
+            "color4":"#2e2734",
+            "color5":"#7d797f",
+            "color6":"#2b2731",
+            "color7":"#fafafa"
+        }
+    },
+    "images":[
+        "images/feature-img.jpg"
+    ],
+    "fontSwatch": {
+       "title": "Montserrat / Georgia / Raleway",
+        "font1": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "42px",
+            "font-weight": "700",
+            "line-height": "46px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "32px",
+            "font-weight": "700",
+            "line-height": "36px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Georgia\", serif",
+            "font-size": "24px",
+            "font-weight": "inherit",
+            "line-height": "26px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Georgia\", serif",
+            "font-size": "18px",
+            "font-weight": "inherit",
+            "line-height": "22px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
+            "font-size": "14px",
+            "font-weight": "inherit",
+            "line-height": "20px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "20px",
+            "color": "fade(@color-swatch1, 70%)",
+            "letter-spacing": "inherit",
+            "color-hover": "@color-swatch1",
+            "background-color": "@color-swatch2",
+            "background-color-hover": "@color-swatch2"
+         },
+        "font7": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "24px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "@color-swatch4"
+        },
+        "font8": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "42px",
+            "font-weight": "inherit",
+            "line-height": "53px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Georgia\", serif",
+            "font-size": "20px",
+            "font-weight": "inherit",
+            "line-height": "24px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-size": "24px",
+            "font-weight": "500",
+            "line-height": "30px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        }
+    }
+}

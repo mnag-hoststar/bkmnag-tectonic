@@ -1,0 +1,114 @@
+// -----------------------------
+// Menu
+// -----------------------------
+
+
+// Menu Sections
+
+.widget.menusections {
+	margin: 0 0 30px;
+	ul {
+		padding: 1em!important;
+		text-align: center;
+		li {
+			@media @mobile {
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+	a {
+		color: @color-swatch4;
+		&:hover {
+			color: @color-swatch2;
+			text-decoration: none;
+		}
+	}
+}
+
+
+// Menu Sections
+
+.menu-header {
+	padding: 2em 0;
+}
+
+// Main Menu
+
+.widget.menu {
+	.main.wrapper {
+		width: 100%;
+		margin: 0 0 2em;
+		border-bottom: 1px solid darken(@color-swatch1,15%);
+		padding-bottom: 30px;
+	}
+	.menu-name,
+	.menu-description,
+	.menu-note,
+	.menu-subsection-name,
+	.menu-subsection-description {
+		text-align: center;
+		padding-bottom: 0;
+	}
+	.menu-subsection {
+		padding: 0;
+	}
+	.menu-item-image-wrap {
+		background-image: none!important;
+		img {
+			max-height: 180px;
+		}
+	}
+}
+
+
+// Promoted Item
+
+.widget.menusections ul,
+.menu .menu-items li.menu-item-promoted,
+.menu-subsection-promoted {
+	padding: 2em;
+	border: 2px solid darken(@color-swatch1,10%);
+}
+
+
+// Nutritional Info
+
+.menu-item-nutritional-title {
+	font-size: bkscale(@font-swatch5-font-size,0.8);
+	letter-spacing: @font-swatch7-letter-spacing;
+	text-transform: uppercase;
+}
+.menu-item-nutritional-prop {
+	font-size: bkscale(@font-swatch5-font-size,0.8);
+	line-height: bkscale(@font-swatch5-line-height,0.8);
+	margin-bottom: 10px;
+}
+
+
+// Price 
+
+.standard-price {
+	color: @font-swatch4-color;
+	font-family: @font-swatch4-font-family;
+	font-size: @font-swatch4-font-size;
+	font-weight: @font-swatch4-font-weight;
+	line-height: @font-swatch4-line-height;
+	letter-spacing: @font-swatch4-letter-spacing;
+}
+
+
+// Dietary Icons
+
+.menu .menu-section-item-dietary-props .dietary-icon {
+	text-transform: uppercase;
+	padding: 3px 6px;
+	background-color: @color-swatch1;
+	border: 2px solid lighten(@color-swatch3,15%);
+	color: @color-swatch3;
+	font-family: @font-swatch7-font-family;
+	font-size: 11px;
+	font-weight: @font-swatch7-font-weight;
+	line-height: @font-swatch7-line-height;
+	letter-spacing: @font-swatch7-letter-spacing;
+}
