@@ -17,8 +17,7 @@ button.btn,
 .ecombasket-summary-link,
 .basket-summary-empty-cta,
 .widget.dropbox .file-name,
-.productlist-filter .productlist-search .btn,
-.widget.ecomproduct .ecom-product .btn  {
+.productlist-filter .productlist-search .btn {
 	background-color: @font-swatch7-background-color;
 	color: @font-swatch7-color;
 	font-family: @font-swatch7-font-family;
@@ -33,12 +32,12 @@ button.btn,
 	margin: 0;
 	text-decoration: none;
 	vertical-align: top;
-	.transition(all, 0.3s, ease-out);
+	.transition(all, 0.3s, ease);
 	-webkit-font-smoothing: antialiased;
 	&:hover {
 		text-decoration: none;
 		background-color: @font-swatch7-background-color-hover;
-		.transition(all, 0.3s, ease-in);
+		.transition(all, 0.3s, ease);
 	}
 }
 
@@ -48,10 +47,13 @@ button.btn,
 }
 
 .widget.clicktocall a {
-	.border-radius(50px);
-	font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    padding: 10px 30px 10px 40px;
+    line-height:@font-swatch7-line-height;
+    .transition(all, .3s, ease);
 	&:hover {
-		.transition(all, .5s, ease-in);
+		.transition(all, .3s, ease);
+		padding: 10px 30px 10px 40px;
 	}
 }
 
@@ -135,8 +137,8 @@ button {
 // Profile Form
 
 .widget.profile form fieldset input {
-	background-color: @color-swatch1;
-	border: 1px solid lighten(@color-swatch5, 35%);
+	background-color: fade(@color-swatch2, 10%);
+	border: 0;
 	border-radius: 0;
 	font-size: bkscale(@font-swatch5-font-size, 0.95);
 }
@@ -148,8 +150,8 @@ button {
 // Signup Form
 
 .widget.signupform form fieldset input {
-	background-color: @color-swatch1;
-	border: 1px solid lighten(@color-swatch5, 35%);
+	background-color: fade(@color-swatch2, 10%);
+	border: 0;
 	border-radius: 0;
 	font-size: bkscale(@font-swatch5-font-size, 0.95);
 	text-indent: 6px;
@@ -171,8 +173,8 @@ button {
 }
 
 .widget.blogsearch form input {
-	background-color: @color-swatch1;
-	border: 1px solid lighten(@color-swatch5, 35%);
+	background-color: fade(@color-swatch2, 10%);
+	border: 0;
 	border-radius: 0;
 	font-size: bkscale(@font-swatch5-font-size, 0.95);
 	margin: 0;
@@ -438,16 +440,23 @@ div[role="main"] .widget {
 
 		}
 		.btn-play {
-			height: 65px;
-			width: 65px;
+			height: 66px;
+			width: 66px;
 			top: 50%;
-			margin-top: -32px;
-			background: image('/images/play.png') @color-swatch1 center no-repeat;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			background: image('/images/play.png') fade(@color-swatch1, 50%) center no-repeat;
+			&:hover {
+			    background: image('/images/play.png') @color-swatch1 center no-repeat;
+			}
 			&:after {
 				display: none;
 			}
 			&.pause {
-				background: image('/images/pause.png') @color-swatch1 center no-repeat;	
+				background: image('/images/pause.png') fade(@color-swatch1, 50%) center no-repeat;	
+				&:hover {
+			        background: image('/images/pause.png') @color-swatch1 center no-repeat;
+			    }
 			}
 		}
 	}
@@ -524,18 +533,15 @@ div[role="main"] .widget {
 	.twitter-profile-pic {
 		float: none;
 		display: inline-block;
-		vertical-align: top;
+		vertical-align: middle;
 		width: 12%;
 		margin-right: 2%;
-		@media @tablet {
-			width: 100%;
-			margin-right: 0;
-		}
 	}
 	.twitter-content {
 		float: none;
 		display: inline-block;
 		width: 85%;
+		vertical-align: middle;
 		a .bk-full-name {
 			display: block;
 			color: @font-swatch4-color;

@@ -9,30 +9,30 @@
     {
         "Swatch 1": {
             "color1":"#ffffff",
-            "color2":"#12242d",
-            "color3":"#0f475c",
-            "color4":"#383838",
-            "color5":"#696969",
+            "color2":"#152831",
+            "color3":"#125b76",
+            "color4":"#454a4f",
+            "color5":"#6c7376",
             "color6":"#000000",
             "color7":"#ffffff"
         },
         "Swatch 2": {
-            "color1":"#f4f4f4",
-            "color2":"#161616",
-            "color3":"#9a6a91",
-            "color4":"#3e3e3e",
-            "color5":"#707070",
+            "color1":"#f6f6f6",
+            "color2":"#221f21",
+            "color3":"#984388",
+            "color4":"#4f4f4f",
+            "color5":"#727272",
             "color6":"#000000",
             "color7":"#ffffff"
         },
         "Swatch 3": {
             "color1":"#ffffff",
-            "color2":"#363636",
-            "color3":"#63874a",
-            "color4":"#3c3c3c",
-            "color5":"#636363",
-            "color6":"#1e1e1e",
-            "color7":"#fafafa"
+            "color2":"#262529",
+            "color3":"#88ae47",
+            "color4":"#3e3840",
+            "color5":"#655f67",
+            "color6":"#000000",
+            "color7":"#ffffff"
         },
         "Swatch 4": {
             "color1":"#ffffff",
@@ -40,7 +40,7 @@
             "color3":"#bb9869",
             "color4":"#2e2734",
             "color5":"#7d797f",
-            "color6":"#2b2731",
+            "color6":"#000000",
             "color7":"#fafafa"
         }
     },
@@ -129,7 +129,7 @@
         "font10": {
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "24px",
-            "font-weight": "500",
+            "font-weight": "400",
             "line-height": "30px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"

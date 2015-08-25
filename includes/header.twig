@@ -6,9 +6,9 @@
 			{{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
 			{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
 		</div><!--end brand-->
-		{{widget('extendednavigation', 'header-navigation', {"align":"right"})|raw}}
+		{{widget('extendednavigation', 'header-navigation', {"align":"left"})|raw}}
+		<div class="social">
+			{{widget('socialicons', 'header-social', {'googleplus': 'profile', 'linkedin':'profile', 'facebook': 'profile', 'twitter': 'profile', 'youtube': 'profile', 'rss': 'profile'})|raw}}
+		</div><!--end social-->
 	</nav><!--end bk-nav-->
-	<div class="social">
-		{{widget('socialicons', 'header-social', {'googleplus': 'profile', 'linkedin':'profile', 'facebook': 'profile', 'twitter': 'profile', 'youtube': 'profile', 'rss': 'profile'})|raw}}
-	</div><!--end social-->
 </header>
