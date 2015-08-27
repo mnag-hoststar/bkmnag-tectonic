@@ -48,13 +48,16 @@ button.btn,
 
 .widget.clicktocall a {
     -webkit-font-smoothing: antialiased;
-    padding: 10px 30px 10px 40px;
-    line-height:@font-swatch7-line-height;
-    .transition(all, .3s, ease);
-	&:hover {
-		.transition(all, .3s, ease);
-		padding: 10px 30px 10px 40px;
-	}
+    padding: 0;
+    @media @mobile {
+        padding: 10px 30px 10px 40px;
+        line-height:@font-swatch7-line-height;
+        .transition(all, .3s, ease);
+    	&:hover {
+    		.transition(all, .3s, ease);
+    		padding: 10px 30px 10px 40px;
+    	}
+    }
 }
 
 .widget.ecomcheckout .checkout-order-button:disabled,
@@ -445,6 +448,7 @@ div[role="main"] .widget {
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%,-50%);
+			-webkit-transform: translate(-50%,-50%);
 			background: image('/images/play.png') fade(@color-swatch1, 50%) center no-repeat;
 			&:hover {
 			    background: image('/images/play.png') @color-swatch1 center no-repeat;

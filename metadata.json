@@ -3,7 +3,7 @@
     "thumbnail":"tectonic.png",
     "screenshot":"tectonic.png",
     "templateType":"standard",
-    "tags": { "en": ["business", "modern", "dark", "social", "contrast", "space"] },
+    "tags": { "en": ["business", "modern", "dark", "social", "contrast", "space", "architecture", "minimalism"] },
     "pageTypes":["home"],
     "colorSwatches":
     {
@@ -45,7 +45,8 @@
         }
     },
     "images":[
-        "images/feature-img.jpg"
+        "images/feature-img.jpg",
+        "images/logo.png"
     ],
     "fontSwatch": {
        "title": "Montserrat / Georgia / Raleway",
