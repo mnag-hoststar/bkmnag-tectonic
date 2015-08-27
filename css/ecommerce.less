@@ -126,8 +126,6 @@
         width: auto;
         height: 40px;
         margin-top: 5px;
-        margin-bottom: 12px;
-        padding: 8px 33px 8px 8px;
         background-color: fade(@color-swatch2, 10%);
 	    border: 0;
         color: @color-swatch5;
@@ -152,10 +150,13 @@
     }
 }
 
+.productlist-display-form select {
+    width: 100%;
+}
+
 .productlist-filter {
-    text-align: center;
     .form-group {
-        vertical-align: top;
+        width: 100%;
         @media @mobile {
             width: 100%;
             margin-bottom: 0;
@@ -165,25 +166,22 @@
     // Label
 
     label {
-        display: block;
+        display: inline-block;
         font-family: @font-swatch2-font-family;
         font-size: 14px;
         color: @color-swatch4;
         line-height: @font-swatch4-line-height;
         font-weight: normal;
         text-align: left;
+        width: 100%;
     }
 
     // Product Search
 
     .productlist-search {
         margin-bottom: 20px;
-        width: 70%;
-        @media @tablet {
-            width: 100%;
-        }
+        position: relative;
         label {
-            display: none;
         }
         input {
             border-radius: 0;
@@ -193,24 +191,15 @@
 	        border: 0;
             -webkit-appearance: none;
             -moz-appearance: none;
-            width: 60%;
-            @media @tablet {
-                width: 100%;
-            }
+            width: 100%;
         }
         .btn {
-            border-radius: 0;
-            height: 40px;
-            position: relative;
-            margin: 0;
-            left: -5px;
-            padding: 4px 14px;
-            margin-top: 5px;
-            width: 20%;
-            @media @tablet {
-                border-radius: 0;
-                left: 0;
-                margin-top: 15px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @media @mobile {
+                position: relative;
+                margin: 10px 0;
                 width: 100%;
             }
         }
@@ -226,7 +215,6 @@
     line-height: @font-swatch4-line-height;
     letter-spacing: @font-swatch4-letter-spacing;
     color: @color-swatch5;
-    text-align: center;
     @media @tablet {
         margin-top: 20px;
     }
