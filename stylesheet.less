@@ -197,11 +197,15 @@
 				padding: 0.5em 0;
 			}
 			&.folder {
-			    @media @tablet {
-				    padding: 18px 0;
-			    }    
+				.text {
+					color: fade(@font-swatch6-color, 70%);
+				}
+				@media @tablet {
+					padding: 18px 0;
+				}    
 			}
 			a {
+				color: fade(@font-swatch6-color, 70%);
 				@media @tablet {
 					padding: 10px 0;
 				}
