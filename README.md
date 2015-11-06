@@ -1,4 +1,4 @@
 Tectonic
 =========
 
-Basekit Standard template
+Basekit Standard Template
