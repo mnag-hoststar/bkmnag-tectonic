@@ -1,7 +1,7 @@
 {
     "name":"Tectonic",
-    "thumbnail":"tectonic.png",
-    "screenshot":"tectonic.png",
+    "thumbnail":"thumbnail.png",
+    "screenshot":"tectonic-screenshot.jpg",
     "templateType":"standard",
     "tags": { "en": ["business", "modern", "dark", "social", "contrast", "space", "architecture", "minimalism"] },
     "pageTypes":["home"],
