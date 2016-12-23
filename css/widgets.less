@@ -5,7 +5,8 @@
 
 button.btn,
 .signupform fieldset button,
-.contactform button.btn,
+.contactform button, .contactform button.btn, 
+.advancedcontactform button, .advancedcontactform button.btn
 .widget.profile form button,
 .widget.paypalbuynow .widget.button.paypal,
 .widget.ecomcheckout .checkout-order-button,
@@ -114,26 +115,31 @@ button {
 
 // Contact Form
 
-.widget.contactform {
-	label {
-		display: none;
-	}
-	input {
-		border: 0;
-		margin-bottom: 20px;
-		background-color: fade(@color-swatch2, 10%);
-		padding: 4px 12px;
-		height: 40px;
-	}
-	textarea {
-		background-color: fade(@color-swatch2, 10%);
-		border: 0;
-		margin-bottom: 20px;
-		min-height: 100px;
-		padding: 8px 12px;
-	}
-	button.btn {
-	}
+
+.form-group {
+	margin-bottom: 1em;
+}
+
+label, .contactform label, .advancedcontactform label {
+	font-family: @font-swatch5-font-family;
+	line-height: @font-swatch5-line-height;
+	font-size: @font-swatch5-font-size;
+	color: @font-swatch5-color;
+}
+
+input, select, .contactform input, .contactform select,
+.advancedcontactform input, .advancedcontactform select {
+	border: 0;
+	background-color: fade(@color-swatch2, 10%);
+	padding: 0 12px;
+	height: 40px;
+}
+
+.contactform textarea, .advancedcontactform textarea {
+	background-color: fade(@color-swatch2, 10%);
+	border: 0;
+	min-height: 100px;
+	padding: 8px 12px;
 }
 
 
