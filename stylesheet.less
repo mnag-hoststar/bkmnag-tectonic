@@ -345,8 +345,6 @@
 
 .bk-header {
 	background-color: fade(@color-swatch2, 80%);
-	//border-bottom: 1px solid fade(@color-swatch5, 15%);
-	//padding: 35px 0;
 	position: relative;
 	-webkit-font-smoothing: antialiased;
 	@media @tablet {
@@ -354,32 +352,13 @@
 	}
 }
 
-/* .bk-pt-home .bk-header{
-	border-bottom: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 2;
-	@media @tablet {
-        position: relative;
-	}
-} */
-
 .bk-nav {
 	//padding: 0 2%;
 	width: 100%;
 	display: table;
 	@media @tablet {
 	    background-color: @color-swatch2;
-		//display: table-cell;
-		//padding: 40px;
-		//width: 100%;
-		//border-top: 1px solid fade(@color-swatch1, 10%);
 	}
-	@media @mobile {
-        //padding: 30px;
-    }
 }
 
 .brand, .social {
@@ -388,10 +367,6 @@
 }
 
 .brand {
-	//display: inline-block;
-	//width: 40%;
-	//position: relative;
-	//z-index: 1;
 	background-color: @color-swatch2;
 	padding: 40px;
 	width: 25%;
@@ -400,17 +375,10 @@
 		width: 100%;
 		border-top: 1px solid fade(@color-swatch1, 10%);
 	}
-	@media @mobile {
-		//width: 85%;
-	}
 }
 
 .social {
 	padding: 40px;
-	//position: relative;
-	//margin-left: -10px;
-	//width: 24%;
-	//z-index: 1;
 	text-align: right;
 	@media @tablet {
 		background: @color-swatch2;
@@ -452,8 +420,6 @@
 		vertical-align: middle;
 	}
 	&.logo {
-		//margin-right: 10px;
-		//max-width: 30%;
 		@media @tablet {
 			max-width: 100%;
 			width: auto;
@@ -462,12 +428,7 @@
 		}
 	}
 	&.companyname {
-		//margin-left: -4px;
-		//width: 65%;
 		padding-left: 20px;
-		@media @tablet {
-			//width: 80%;
-		}
 		a {
 			font-weight: @font-swatch10-font-weight;
 			word-wrap: break-word;
@@ -477,8 +438,6 @@
 		}
 	}
 	&.extendednavigation {
-		//margin-left: -4px;
-		//width: 59%;
 		padding: 0 40px;
 		@media @tablet {
 			display: block;
@@ -567,7 +526,6 @@
 }
 
 .widget.feature h2, .widget.feature h3 {
-	//max-width: 65%;
 	@media @tablet {
 		max-width: 100%;
 	}
@@ -611,32 +569,6 @@
 	}
 }
 
-// Image fade
-/* .widget.feature .feature-bgimg .content:after {
-	background-color: fade(@color-swatch2, 85%);
-	content: "";
-	position: absolute;
-	width: 65%;
-	display: none;
-	margin-left: 0;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	overflow: hidden;
-	@media only screen and (min-width: 1500px) {
-        margin-left: 5%;
-    }
-	@media @tablet {
-		background-color: rgba(0, 0, 0, 0.25);
-		margin: 0;
-		-webkit-transform: skewX(0deg);
-		-moz-transform: skewX(0deg);
-		transform: skewX(0deg);
-		width: 100%;
-	}
-} */
-
 .widget.feature .feature-bgimg .content button.btn {
 	background: transparent;
 	border: 2px solid @color-swatch1;
@@ -657,14 +589,6 @@
 // -----------------------------
 // Main
 // -----------------------------
-
-
-/* div[role="main"] {
-	padding: 40px 0;
-	@media @tablet { 
-		padding: 40px 25px;
-	}
-} */
 
 h5 {
     font-size: @font-swatch5-font-size;
@@ -697,4 +621,21 @@ blockquote {
 	.widget.profile .bk-profile-socialicons span a, .widget.profile .bk-profile-socialicons span a:hover {
 		background-color: transparent;
 	}
+}
+
+.gdpr-footer {
+	margin: 0 auto;
+    max-width: 1400px;
+    width: 100%;
+    background-color: transparent;
+	padding: 10px 40px;
+	
+	@media @mobile {
+		padding: 10px 30px;
+    }
+    
+    &__link {
+		font-size: @font-swatch5-font-size;
+		padding: 5px 10px;
+    }
 }
