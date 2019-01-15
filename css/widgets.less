@@ -2,7 +2,6 @@
 // Buttons
 // -----------------------------
 
-
 button.btn,
 .signupform fieldset button,
 .contactform button, .contactform button.btn, 
@@ -90,12 +89,9 @@ button {
 	padding-left: 8px;
 }
 
-
-
 // -----------------------------
 // Forms
 // -----------------------------
-
 
 // Single Input Forms
 
@@ -112,9 +108,7 @@ button {
 	}
 }
 
-
 // Contact Form
-
 
 .form-group {
 	margin-bottom: 1em;
@@ -144,7 +138,6 @@ input, select, .contactform input, .contactform select,
 	padding: 8px 12px;
 }
 
-
 // Profile Form
 
 .widget.profile form fieldset input {
@@ -156,7 +149,6 @@ input, select, .contactform input, .contactform select,
 
 .widget.profile form fieldset button.btn {
 } 
-
 
 // Signup Form
 
@@ -174,7 +166,6 @@ input, select, .contactform input, .contactform select,
 		left: 0;
 	}
 } 
-
 
 // Blog Search Form
 
@@ -194,7 +185,6 @@ input, select, .contactform input, .contactform select,
 
 .blog-search-form button {
 }
-
 
 // Inputs + Button
 
@@ -241,11 +231,42 @@ input, select, .contactform input, .contactform select,
 			margin-top: 8px;
 		}
 	}
-} 
+}
 
+// Privacy Checkboxes
 
-
-
+.widget.advancedcontactform .form-group.advancedcontactform__form-group--terms,
+.widget.contactform .form-group.contactform__form-group--terms,
+.widget.signupform .form-group.signupform__form-group--terms {
+	input[type="checkbox"] {
+		opacity: 1;
+		margin: 4px 8px 4px 4px;
+		padding: 0;
+		min-height: auto;
+		min-width: auto;
+		height: auto !important;
+		width: auto !important;
+		line-height: 1em;
+		-webkit-appearance: checkbox;
+		-moz-appearance: checkbox;
+		appearance: checkbox;
+	}
+	
+	label {
+		padding-bottom: 0;
+		
+		&:before {
+			display: none;
+		}
+		
+		.form__link {
+			font-family:@font-swatch5-font-family;
+            font-size: @font-swatch5-font-size;
+			font-weight:@font-swatch5-font-weight;
+			letter-spacing: @font-swatch5-letter-spacing;
+		}
+	}
+}
 
 // -----------------------------
 // Social Icons
@@ -305,16 +326,13 @@ input, select, .contactform input, .contactform select,
 	background-image: image('/images/icons/youtube.png');
 }
 
-
 // -----------------------------
 // General Widgets
 // -----------------------------
 
-
 div[role="main"] .widget {
 	margin-bottom: 10px;
 }
-
 
 // Gallery
 
@@ -520,7 +538,6 @@ div[role="main"] .widget {
 	}
 }
 
-
 // Twitter
 
 .widget.twitter {
@@ -604,20 +621,17 @@ div[role="main"] .widget {
 	}
 }
 
-
 // Dividing Line
 
 hr.line {
 	background-color: lighten(@color-swatch5, 35%);
 }
 
-
 // Facebook Comments (Responsive)
 
 .fb_iframe_widget_fluid span, .fb_iframe_widget iframe {
     width: 100%!important;
 }
-
 
 // Yelp
 
