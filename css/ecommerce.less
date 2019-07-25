@@ -669,15 +669,22 @@
 
     // Continue to Payment Button
 
+	.basket-summary-continue-shopping,
+	.basket-summary-submit {
+		display: inline-block;
+		text-align: center;
+
+		@media @mobile {
+			width: 100%;
+		}
+	}
+	
     .basket-summary-submit {
-        margin-bottom: 30px;
-        @media @tablet {
-            width: 100%;
-        }
         &:disabled {
-            opacity: 0.2;
+            opacity: 0.4;
         }
     }
+	
     .js-shipping-opts {
         border-bottom: 1px solid darken(@color-swatch1,10%);
         padding-bottom: 20px;
