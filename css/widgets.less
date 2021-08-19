@@ -114,21 +114,44 @@ button {
 	margin-bottom: 1em;
 }
 
-label, .contactform label, .advancedcontactform label {
+label,
+.contactform label,
+.advancedcontactform label {
 	font-family: @font-swatch5-font-family;
 	line-height: @font-swatch5-line-height;
 	font-size: @font-swatch5-font-size;
 	color: @font-swatch5-color;
 	display: inline-block;
-	margin-bottom: .3em;
+	margin-top: 1em;
+    margin-bottom: 0;
 }
 
-input, select, .contactform input, .contactform select,
-.advancedcontactform input, .advancedcontactform select {
+input,
+select,
+.contactform input,
+.contactform select,
+.advancedcontactform input,
+.advancedcontactform select {
 	border: 0;
 	background-color: fade(@color-swatch2, 10%);
 	padding: 0 12px;
 	height: 40px;
+}
+
+select,
+.contactform select,
+.advancedcontactform select {
+	padding-right: 2.2em;
+    width: 100%;
+    .appearance(none) !important;
+	background-image: url("data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNCAyNCI+Cgk8cG9seWxpbmUgc3Ryb2tlPSIjNzY3ODgwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjMiIHBvaW50cz0iMjAuMSw4LjYgMTIsMTYuNyAzLjksOC42IiAvPgo8L3N2Zz4=");
+    background-repeat: no-repeat;
+    background-position: right 0.5em center;
+    background-size: 1.2em;
+
+	&::-ms-expand {
+		display: none;
+	}
 }
 
 .contactform textarea, .advancedcontactform textarea {
