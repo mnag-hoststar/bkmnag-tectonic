@@ -182,9 +182,6 @@ select,
 	font-size: bkscale(@font-swatch5-font-size, 0.95);
 }
 
-.widget.profile form fieldset button.btn {
-} 
-
 // Signup Form
 
 .widget.signupform form fieldset input {
@@ -216,9 +213,6 @@ select,
 	font-size: bkscale(@font-swatch5-font-size, 0.95);
 	margin: 0;
 	text-indent: 6px;
-}
-
-.blog-search-form button {
 }
 
 // Inputs + Button
@@ -464,6 +458,7 @@ div[role="main"] .widget {
 			-webkit-user-select: none;
 			-moz-user-select: none;
 			-ms-user-select: none;
+			user-select: none;
 			
 			.btn-prev, .btn-next {
 				text-indent: 100%;
@@ -556,8 +551,6 @@ div[role="main"] .widget {
 		}
 		.title {
 			font-weight: bold;
-		}
-		.description {
 		}
 		.title + .description {
 			padding-left: 0;
