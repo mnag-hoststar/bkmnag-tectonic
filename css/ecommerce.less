@@ -1,21 +1,23 @@
+// Ecommerce
 
-// -----------------------------
-// Ecommerce 
-// -----------------------------
 .ecom-product-go-to-checkout-btn-wrapper {
     border: 2px solid @font-swatch7-background-color;
+
     &:hover {
         border: 2px solid @font-swatch7-background-color-hover;
     }
+
     a {
         color: @font-swatch7-background-color;
         background-color: transparent;
         display: inline-block;
+
         &:hover {
             text-decoration: none;
             color: @font-swatch7-background-color-hover;
             background-color: transparent;
         }
+
         @media @tablet {
             width: 100%;
             text-align: center;
@@ -26,6 +28,7 @@
 .ecom-product-add-to-cart-btn-wrapper, .ecom-product-go-to-checkout-btn-wrapper {
     display: table-cell;
     vertical-align: middle;
+
     @media @tablet {
         display: block;
         width: 100%;
@@ -43,10 +46,14 @@
         margin-top: 10px;
         margin-bottom: 10px;
         padding: 0;
+
         &:hover {
-            .ecom-productslist-title, .ecom-productlist-price,
-            .ecom-featuredproducts-title, .ecom-featuredproducts-price {
+            .ecom-productslist-title,
+            .ecom-productlist-price,
+            .ecom-featuredproducts-title,
+            .ecom-featuredproducts-price {
                 color: darken(@color-swatch4, 20%);
+
                 &:hover {
                     text-decoration: none;
                 }
@@ -59,6 +66,7 @@
         .ecom-featuredproducts-image-wrap {
             margin-bottom: 1em;
         }
+
         a:hover {
             text-decoration: none;
         }
@@ -111,10 +119,7 @@
     }
 }
 
-
 // Select Boxes
-// -----------------------------
-
 
 .productlist-filter,
 .delivery,
@@ -127,19 +132,18 @@
 	    border: 0;
         color: @color-swatch5;
         cursor: pointer;
+
         &:focus {
             outline: 0;
         }
+
         @media @tablet {
             width: 100%;
         }
     }
 }
 
-
 // Product Filter
-// -----------------------------
-
 
 .widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
     @media (max-width: 1060px) {
@@ -154,6 +158,7 @@
 .productlist-filter {
     .form-group {
         width: 100%;
+
         @media @mobile {
             width: 100%;
             margin-bottom: 0;
@@ -178,6 +183,7 @@
     .productlist-search {
         margin-bottom: 20px;
         position: relative;
+
         input {
             border-radius: 0;
             height: 40px;
@@ -188,10 +194,12 @@
             -moz-appearance: none;
             width: 100%;
         }
+
         .btn {
             position: absolute;
             right: 0;
             bottom: 0;
+
             @media @mobile {
                 position: relative;
                 margin: 10px 0;
@@ -210,18 +218,16 @@
     line-height: @font-swatch4-line-height;
     letter-spacing: @font-swatch4-letter-spacing;
     color: @color-swatch5;
+
     @media @tablet {
         margin-top: 20px;
     }
 }
 
 // Basket
-// -----------------------------
 
 .widget.ecombasket {
     margin-bottom: 2em;
-
-    // Basket
 
     .ecombasket-pull {
         width: 142px;
@@ -232,18 +238,22 @@
         background-size: 16px;
         -webkit-font-smoothing: antialiased;
         .transition(all, 0.3s, ease);
+
         &:hover {
             .transition(all, 0.3s, ease);
+
             &:hover {
                 p, .basket-count {
                     color: @color-swatch1;
                 }
             }
         }
+
         @media @tablet {
             width: 100%;
             background-position: 5% 50%;
         }
+
         p, .basket-count {
             font-family: @font-swatch7-font-family;
             font-size: @font-swatch7-font-size;
@@ -252,6 +262,7 @@
             letter-spacing: @font-swatch7-letter-spacing;
             color: @font-swatch7-color;
         }
+
         p:before {
             display: none;
         }
@@ -261,8 +272,7 @@
 
     .ecombasket-item-title,
     .ecombasket-item-price,
-    .ecombasket-total-wrap p
-     {
+    .ecombasket-total-wrap p {
         font-family: @font-swatch2-font-family;
         font-size: 16px;
         color: @color-swatch4;
@@ -283,9 +293,11 @@
         border: 1px solid darken(@color-swatch1,10%);
         border-top: 2px solid @color-swatch2;
         background-color: darken(@color-swatch1,4%);
+
         @media @mobile {
             width: 100%;
         }
+
         ul li {
             position: relative;
             border-bottom: 1px solid darken(@color-swatch1,15%);
@@ -295,6 +307,7 @@
 
         .ecombasket-checkout-wrap {
             margin: 0;
+            
             a.ecombasket-checkout-link {
                 padding: 6px 8px;
                 background-color: @color-swatch4;
@@ -303,6 +316,7 @@
                 font-size: 12px;
                 box-shadow: none;
                 border: none!important;
+
                 &:hover {
                     background-color: @color-swatch2;
                     color: @color-swatch1;
@@ -310,9 +324,11 @@
             }
         }
     }
+
     .ecombasket-item-count-wrapper p {
         font-size: 14px;
     }
+
     .ecombasket-item-count-wrapper {
         font-family: @font-swatch4-font-family;
         font-size: 12px;
@@ -331,6 +347,7 @@
         float: right;
         font-size: 12px;
         text-decoration: underline;
+
         &:hover {
             color: @font-swatch4-color;
         }
@@ -343,10 +360,7 @@
     }
 }
 
-
 // Single Product
-// -----------------------------
-
 
 .widget.ecomproduct .ecom-product {
 
@@ -362,17 +376,21 @@
         letter-spacing: @font-swatch4-letter-spacing;
         color: @font-swatch4-color;
     }
+
     .ecom-product-vartitle {
         display: inline-block;
+
         &:after {
             content: ":";
             position: relative;
             padding-left: 5px;
         }
     }
+
     .ecom-product-info .ecom-product-variation select {
         width: 100%;
     }
+
     .ecom-product-preview-image-wrap {
         text-align: left;
     }
@@ -398,6 +416,7 @@
         background-size: 14px;
         font-size: @font-swatch7-font-size;
         width: 100%;
+
         @media @tablet {
             width: 100%;
             background-position: 5% 50%;
@@ -417,6 +436,7 @@
             background-size: 20px;
             border-color: #45D645;
             box-shadow: none;
+
             &:hover {
                 color: @color-swatch4;
             }
@@ -433,12 +453,15 @@
         position: relative;
         line-height: 22px;
     }
+
     .ecom-product-cattag {
         margin: 15px 0;
+
         @media @tablet {
             margin: 10px 0;
         }
     }
+
     .ecom-product-category, .ecom-product-cattag {
         a:first-child:before {
             content: ":";
@@ -446,6 +469,7 @@
             position: relative;
         }
     }
+
     // Category Separation
 
     .ecom-product-tag-link:last-child:after {
@@ -461,10 +485,7 @@
     }
 }
 
-
 // Basket Summary
-// -----------------------------
-
 
 .widget.ecombasketsummary {
     margin-bottom: 30px;
@@ -473,12 +494,15 @@
 
     .image-wrap {
         background-position: -10000%;
+
         @media (max-width: 530px) {
             max-width: 130px;
+
             img {
                 max-width: 100%!important;
             }
         }
+
         @media (max-width: 360px) { 
             max-width: 100%;
         }
@@ -515,6 +539,7 @@
         line-height: 24px;
         color: @color-swatch2;
         font-weight: @font-swatch10-font-weight;
+
         &:hover {
             text-decoration: underline;
         }
@@ -524,6 +549,7 @@
 
     .basket-summary-quantity {
         margin-top: 8px;
+
         .basket-summary-quantity-text {
             padding: 0 8px 0 0;
             font-family: @font-swatch4-font-family;
@@ -531,12 +557,14 @@
             font-size: 14px;
             line-height: 20px;
         }
+
         .quantity-number {
             position: relative;
             background-color: darken(@color-swatch1,3%);
             padding: 1px 10px;
             font-size: 14px;
         }
+
         button {
             border-radius: 4px;
             width: 24px;
@@ -550,10 +578,12 @@
             font-family: @font-swatch4-font-family;
             color: @color-swatch1;
             vertical-align: middle;
+
             &:hover {
                 background-color: @color-swatch2;
                 cursor: pointer;
             }
+
             &:focus {
                 outline: none;
             }
@@ -584,14 +614,17 @@
             letter-spacing: 1px;
             color: @color-swatch1;
             text-transform: uppercase;
+
             @media @mobile {
                 font-size: 12px;
             }
+
             th {
                 padding: 10px 0;
                 position: relative;
                 left: 20px;
                 text-align: left;
+
                 &:last-child {
                     @media (max-width: 360px) {
                         display: none;
@@ -608,21 +641,25 @@
 
         tr td {
             border-bottom: 1px solid darken(@color-swatch1,10%);
+
             @media (max-width: 360px) {
                 display: table;
                 width: 100%;
                 border-bottom: 0;
             }
+
             &:nth-child(1),
             &:nth-child(2) {
                 padding: 20px;
                 vertical-align: top;
             }
+
             &:nth-child(2) {
                 @media (max-width: 530px) {
                     padding-left: 0;
                 }
             }
+
             &:nth-child(3) {
                 padding: 20px;
                 border-left: 1px solid darken(@color-swatch1,10%);
@@ -636,6 +673,7 @@
                     padding-bottom: 0;
                 }
             }
+
             &:nth-child(2),
             &:nth-child(3) {
                 @media (max-width: 360px) {
@@ -643,6 +681,7 @@
                     border-left: 0;
                 }
             }
+
             &:last-child {
                 @media (max-width: 360px) {
                     padding: 6px 20px;
@@ -652,6 +691,7 @@
                 }
             }
         }
+
         tr:last-child td:last-child {
             @media (max-width: 360px) {
                 border-top: 0;
@@ -685,6 +725,7 @@
         font-size: 14px;
         line-height: 26px;
         margin-bottom: 20px;
+
         label {
             margin-bottom: 10px;
         }

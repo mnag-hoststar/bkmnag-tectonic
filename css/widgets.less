@@ -1,6 +1,4 @@
-// -----------------------------
 // Buttons
-// -----------------------------
 
 button.btn,
 .signupform fieldset button,
@@ -34,6 +32,7 @@ button.btn,
 	vertical-align: top;
 	.transition(all, 0.3s, ease);
 	-webkit-font-smoothing: antialiased;
+
 	&:hover {
 		text-decoration: none;
 		background-color: @font-swatch7-background-color-hover;
@@ -49,10 +48,12 @@ button.btn,
 .widget.clicktocall a {
     -webkit-font-smoothing: antialiased;
     padding: 0;
+
     @media @mobile {
         padding: 10px 30px 10px 40px;
         line-height:@font-swatch7-line-height;
         .transition(all, .3s, ease);
+
     	&:hover {
     		.transition(all, .3s, ease);
     		padding: 10px 30px 10px 40px;
@@ -64,6 +65,7 @@ button.btn,
 button:disabled {
 	background-color: fadeout(@font-swatch7-background-color, 50%);
 	cursor: not-allowed;
+	
 	&:hover {
 		background-color: fadeout(@font-swatch7-background-color, 50%);
 	}
@@ -89,11 +91,7 @@ button {
 	padding-left: 8px;
 }
 
-// -----------------------------
 // Forms
-// -----------------------------
-
-// Single Input Forms
 
 .widget {
 	&.profile, &.signupform, &.blogsearch {
@@ -194,6 +192,7 @@ select,
 
 .widget.signupform fieldset button.btn {
 	left: -5px;
+
 	@media @mobile {
 		left: 0;
 	}
@@ -219,13 +218,16 @@ select,
 
 .widget.profile form fieldset input, .widget.signupform form fieldset input, .widget.blogsearch form input {
 	width: 70%;
+
 	@media @mobile {
 		.border-radius(0px);
 		width: 100%;
 	}
+
 	+ button, button.btn {
 	    float: right;
 		width: 30%;
+
 		@media @mobile {
 			border-radius: 0;
 			left: 0;
@@ -236,6 +238,7 @@ select,
 			float: none;
 		}
 	}
+
 	@media @tablet {
 		.responsivecolumns & {
 			width: 100%;
@@ -251,6 +254,7 @@ select,
 		left: 0;
 		border-radius: 0;
 	}
+
 	@media @tablet {
 		.responsivecolumns & {
 			margin-left: 0;
@@ -297,9 +301,7 @@ select,
 	}
 }
 
-// -----------------------------
 // Social Icons
-// -----------------------------
 
 
 .widget.socialicons span a, .widget.socialicons span a:hover, .widget.profile .bk-profile-socialicons span a, .widget.profile .bk-profile-socialicons span a:hover {
@@ -309,6 +311,7 @@ select,
 	color: @color-swatch3;
 	height: 38px;
 	width: 38px;
+
 	@media @mobile {
 		height: 36px;
 		width: 36px;
@@ -355,9 +358,7 @@ select,
 	background-image: image('/images/icons/youtube.png');
 }
 
-// -----------------------------
 // General Widgets
-// -----------------------------
 
 div[role="main"] .widget {
 	margin-bottom: 10px;
@@ -367,15 +368,18 @@ div[role="main"] .widget {
 
 .widget.gallery {
 	margin: 20px 0 20px -0.5%;
+
 	ul li {
 		@media @tablet {
 			width: 50%;
 			padding-bottom: 50%;
 		}
+
 		@media @mobile {
 			width: 100%;
 			padding-bottom: 100%;
 		}
+
 		span.image-data:hover {
 			background-color: fade(@color-swatch4, 80%);
 			padding: 30px;
@@ -383,9 +387,9 @@ div[role="main"] .widget {
 			display: table-cell!important;
 			vertical-align: middle;
 		}
+
 		span.image-data:after {
 			content: "";
-			//background: fade(@color-swatch1, 25%);
 			display: block;
 			position: relative;
 			position: absolute;
@@ -395,6 +399,7 @@ div[role="main"] .widget {
 			bottom: 18px;
 			.transition(background-color, 0.5s, ease-out);
 		}
+
 		span.inner {
 			.title,
 			.description {
@@ -414,21 +419,24 @@ div[role="main"] .widget {
 				line-height: 20px;
 			}
 		}
+
 		.inner {
 	        left: 0;
 	        right: 0;
 	        bottom: 0;
 	        -webkit-font-smoothing: antialiased;
 		    filter: grayscale(100%);
-            -webkit-filter: grayscale(100%);  /* For Webkit browsers */
-            filter: gray;  /* For IE 6 - 9 */
+            -webkit-filter: grayscale(100%);
+            filter: gray;
             .transition(all, 0.5s, ease-out);
+
             &:hover {
                 filter: grayscale(0%);
                 -webkit-filter: grayscale(0%);
                 filter: none;
                 .transition(all, 0.5s, ease-in);
             }
+
             a {
                 display: table;
                 width: 100%;
@@ -436,12 +444,14 @@ div[role="main"] .widget {
             }
 	    }
 	}
+
 	.image-data {
 		padding: 30px;
 		display: table-cell;
 		vertical-align: middle;
 		opacity: 0;
 		.transition(all, 0.5s, ease-out);
+
 		&:hover {
 			background-color: fade(@color-swatch4, 80%);
 			opacity: 1;
@@ -465,6 +475,7 @@ div[role="main"] .widget {
 				overflow: hidden;
 				white-space: nowrap;
 			}
+
 			.btn-prev {
 				left: 0;
 				height: 65px;
@@ -475,6 +486,7 @@ div[role="main"] .widget {
 					background: image('/images/arrow-prev-hov.png') @color-swatch2 center no-repeat;
 				}
 			}
+
 			.btn-next {
 				right: 0;
 				height: 65px;
@@ -485,6 +497,7 @@ div[role="main"] .widget {
 					background: image('/images/arrow-next-hov.png') @color-swatch2 center no-repeat;
 				}
 			}
+
 			@media @mobile {
 				.btn-next,
 				.btn-prev {
@@ -496,8 +509,8 @@ div[role="main"] .widget {
 					}
 				}
 			}
-
 		}
+
 		.btn-play {
 			height: 66px;
 			width: 66px;
@@ -506,22 +519,28 @@ div[role="main"] .widget {
 			transform: translate(-50%,-50%);
 			-webkit-transform: translate(-50%,-50%);
 			background: image('/images/play.png') fade(@color-swatch1, 50%) center no-repeat;
+
 			&:hover {
 			    background: image('/images/play.png') @color-swatch1 center no-repeat;
 			}
+
 			&:after {
 				display: none;
 			}
+
 			&.pause {
-				background: image('/images/pause.png') fade(@color-swatch1, 50%) center no-repeat;	
+				background: image('/images/pause.png') fade(@color-swatch1, 50%) center no-repeat;
+
 				&:hover {
 			        background: image('/images/pause.png') @color-swatch1 center no-repeat;
 			    }
 			}
 		}
 	}
+
 	.slideshow-widget-controls {
 		margin-top: 0;
+
 		.dot {
 			.border-radius(50px);
 			width: 12px;
@@ -529,10 +548,12 @@ div[role="main"] .widget {
 			background-color: transparent;
 			border: 1px solid darken(@color-swatch1,10%);
 			margin-top: 8px;
+
 			&.selected {
 				background-color: transparent;
 				border: 1px solid @color-swatch2;
 			} 
+
 			&:hover {
 				background-color: @color-swatch2;
 				border: 1px solid @color-swatch2;
@@ -543,15 +564,18 @@ div[role="main"] .widget {
 
 	.content-wrapper {
 		background-color: fade(@color-swatch2, 50%);
+
 		.title, .description {
 			font-family: @font-swatch5-font-family;	
 			font-size: (@font-swatch5-font-size * 0.8);
 			padding: 1.2em 1.5em;
 			display: inline-block;
 		}
+
 		.title {
 			font-weight: bold;
 		}
+
 		.title + .description {
 			padding-left: 0;
 		}
@@ -570,23 +594,30 @@ div[role="main"] .widget {
 
 .widget.twitter {
 	margin: 20px 0;
+
 	img {
 		border-radius: 50%;
 	}
+
 	p {
 		color: @color-swatch4;
 		padding: 0;
-	}	
+	}
+
 	li {
 		border-bottom: darken(@color-swatch1,10%);
+
 		&:last-child {
 			padding-bottom: 0;
 		}
 	}
+
 	ul li a:hover {
 		text-decoration: none;
 	}
+
 	// Tweet Content
+
 	.twitter-profile-pic {
 		float: none;
 		display: inline-block;
@@ -594,11 +625,13 @@ div[role="main"] .widget {
 		width: 12%;
 		margin-right: 2%;
 	}
+
 	.twitter-content {
 		float: none;
 		display: inline-block;
 		width: 85%;
 		vertical-align: middle;
+
 		a .bk-full-name {
 			display: block;
 			color: @font-swatch4-color;
@@ -608,6 +641,7 @@ div[role="main"] .widget {
 			line-height: @font-swatch4-line-height;
 			letter-spacing: @font-swatch4-letter-spacing;
 		}
+
 		p a, span, a .bk-full-name, p:last-child {
 			display: inline-block;
 			color: @font-swatch5-color;
@@ -616,33 +650,43 @@ div[role="main"] .widget {
 			line-height: @font-swatch5-line-height;
 			letter-spacing: @font-swatch5-letter-spacing;
 		}
+
 		// Tweet Link
+
 		p a, a:hover span.bk-full-name {
 			font-family: @font-swatch5-font-family;
 			font-size: @font-swatch5-font-size;
 			color: @color-swatch2;
 			text-decoration: none;
 		}
+
 		span a {
 			text-decoration: none;
+
 			&:hover {
 				color: @color-swatch2;
 				text-decoration: none;
 			}
 		}
+
 		p {
 			margin-top: 4px;
+
 			&:last-child {
 				font-weight: inherit;
 			}
 		}
+
 		// Extra Info
+
 		time {
 			display: none;
 		}
+
 		span {
 			font-weight: inherit;
 		}
+
 		span, span a, p:last-child {
 			font-size: 13px;
 		}
@@ -666,6 +710,7 @@ hr.line {
 .widget.yelpreview {
 	background-color: lighten(@color-swatch5, 45%);
 	padding: 24px 25px 15px;
+
 	ul {
 		padding-bottom: 0;
 	}

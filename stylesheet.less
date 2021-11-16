@@ -5,15 +5,14 @@
 @import "@{templateLocal}/css/ecommerce.less";
 @import "@{templateLocal}/css/menu.less";
 
-// -----------------------------
 // Page Settings
-// -----------------------------
 
 .container {
 	margin: 0 auto;
 	max-width: 1400px;
 	width: 100%;
 	padding: 40px;
+
 	@media @mobile {
         padding: 30px;
 	}
@@ -40,9 +39,7 @@
 	-o-transition:      @prop @time @ease;  
 }
 
-// -----------------------------
 // Language Selector
-// -----------------------------
 
 @language-padding: 0.5em;
 @language-line-height: @font-swatch6-line-height;
@@ -61,6 +58,7 @@
 	&.language-selector--light {
 	    background-color: fade(@color-swatch2, 80%);
 	}
+
 	&.language-selector--dark {
         background-color: @color-swatch2;
 	}
@@ -113,6 +111,7 @@
             display: block;
     	    height: @language-line-height+2;
     	}
+
     	&:after {
     	    content: "";
             display: block;
@@ -290,9 +289,11 @@
 		box-sizing: content-box;
 		line-height: @language-line-height;
 	}
+
 	.language-selector.language-selector--flag-text & {
 		margin: 0;
 	}
+
 	.language-selector.language-selector--dropdown.language-selector--flag-text & {
 		float: left;
 		box-sizing: border-box;
@@ -312,10 +313,12 @@
 		display: inline-block;
 		padding: @language-padding 0 @language-padding @language-padding;
 	}
+
 	.language-selector.language-selector--text &,
 	.language-selector.language-selector--flag & {
 		padding: @language-padding 0;
 	}
+
 	.language-selector.language-selector--text & {
 		display: block;
 	}
@@ -338,23 +341,22 @@
 	}
 }
 
-// -----------------------------
 // Header
-// -----------------------------
 
 .bk-header {
 	background-color: fade(@color-swatch2, 80%);
 	position: relative;
 	-webkit-font-smoothing: antialiased;
+
 	@media @tablet {
 		position: relative;
 	}
 }
 
 .bk-nav {
-	//padding: 0 2%;
 	width: 100%;
 	display: table;
+
 	@media @tablet {
 	    background-color: @color-swatch2;
 	}
@@ -369,6 +371,7 @@
 	background-color: @color-swatch2;
 	padding: 40px;
 	width: 25%;
+
 	@media @tablet {
 	    display: inline-block;
 		width: 100%;
@@ -379,6 +382,7 @@
 .social {
 	padding: 40px;
 	text-align: right;
+
 	@media @tablet {
 		background: @color-swatch2;
 		display: table-header-group;
@@ -387,8 +391,10 @@
 		text-align: center;
 		width: 100%;
 	}
+
 	.widget.socialicons {
 		margin: 0;
+
 		span a {
 			background-color: fade(@color-swatch1, 80%);
 			border: 0;
@@ -397,14 +403,17 @@
 			height: 32px;
 			width: 32px;
 			background-size: 16px;
+
 			&:hover {
 			    background-color: @color-swatch1;
 			}
+
 			@media @tablet {
 				height: 32px;
 				width: 32px;
 			}
 		}
+
 		.icons {
 			@media @tablet {
 				padding: 15px 0 10px;
@@ -418,76 +427,93 @@
 		display: table-cell;
 		vertical-align: middle;
 	}
+
 	&.logo {
 		@media @tablet {
 			max-width: 100%;
 			width: auto;
 		}
+
 		@media @mobile {
 		}
 	}
+
 	&.companyname {
 		padding-left: 20px;
+
 		a {
 			font-weight: @font-swatch10-font-weight;
-			word-wrap: break-word;
+			word-break: break-word;
+
 			@media @mobile {
 				font-size: bkscale(@font-swatch10-font-size, 0.85);
 			}
 		}
 	}
+
 	&.extendednavigation {
 		padding: 0 40px;
+
 		@media @tablet {
 			display: block;
 			margin-left: 0;
 			width: 100%;
 		}
+
 		ul {
 		    @media @tablet {
 		        padding-top: 0;
 		        padding-bottom: 40px;
 		    }
 		}
+
 		ul li {
 			@media @tablet {
 				border-bottom: 1px solid fade(@color-swatch1, 10%);
 				padding: 0.5em 0;
 			}
+
 			&.folder {
 				.text {
 					color: fade(@font-swatch6-color, 70%);
 				}
+
 				@media @tablet {
 					padding: 18px 0;
 				}    
 			}
+
 			a {
 				color: fade(@font-swatch6-color, 70%);
+				
 				@media @tablet {
 					padding: 10px 0;
 				}
 			}
 		}
+
 		ul li.folder ul li a {
 			padding: 10px 0;
 		}
+
 		ul li:hover ul {
 			background-color: fade(@color-swatch3, 95%);
-			@media @tablet {
-			}
+
 			li {
                 padding: 8px 20px;
 			}
+
 			li:last-child {
 				@media @tablet {
 					border-bottom: none;
 				}
 			}
 		}
+
 		a.pull {
 			top: -68px;
 			right: 40px;
+
 			&:after {
                 height: 2px;
                 background: @font-swatch6-color;
@@ -515,10 +541,12 @@
 	height: 600px;
 	min-height: 350px;
 	vertical-align: bottom;
+
 	@media @tablet {
 	    vertical-align: middle;
 		background-color: fade(@color-swatch2, 80%);
 	}
+
 	@media @tablet {
         height: 350px;
 	}
@@ -535,6 +563,7 @@
 	font-size: @font-swatch8-font-size;
 	font-weight: @font-swatch8-font-weight;
 	line-height: @font-swatch8-line-height;
+
 	@media @mobile {
 		font-size: bkscale(@font-swatch8-font-size, 0.7);
 		line-height: bkscale(@font-swatch8-line-height, 0.7);
@@ -547,6 +576,7 @@
 	font-size: @font-swatch9-font-size;
 	font-weight: @font-swatch9-font-weight;
 	line-height: @font-swatch9-line-height;
+
 	@media @mobile {
 		font-size: bkscale(@font-swatch9-font-size, 0.7);
 		line-height: bkscale(@font-swatch9-line-height, 0.7);
@@ -559,10 +589,11 @@
 	padding: 40px;
 	background-color: fade(@color-swatch2, 80%);
 	-webkit-font-smoothing: antialiased;
+
 	@media @tablet {
-		//padding: 30px;
 		background: none;
 	}
+
 	@media @mobile {
 		padding: 30px;
 	}
@@ -576,6 +607,7 @@
 	padding: 8px 24px 8px;
 	text-transform: uppercase;
 	.transition(all, .3s, ease-out);
+
 	&:hover {
 		background-color: @color-swatch1;
 		color: @color-swatch2;
@@ -583,9 +615,7 @@
 	}
 }
 
-// -----------------------------
 // Main
-// -----------------------------
 
 h1, h2, h3, h4, h5, h6, a, p, ol, ul {
 	word-break: break-word;
@@ -604,6 +634,7 @@ blockquote {
     font-weight: 300;
     line-height: @font-swatch3-line-height;
 	word-break: break-word;
+
     &:before {
         display: none;
     }
@@ -620,12 +651,11 @@ select {
     }
 }
 
-// -----------------------------
 // Footer
-// -----------------------------
 
 .bk-footer {
 	border-top: 1px solid fade(@color-swatch2, 20%);
+	
 	.widget.profile .bk-profile-socialicons span a, .widget.profile .bk-profile-socialicons span a:hover {
 		background-color: transparent;
 	}

@@ -1,15 +1,14 @@
-// -----------------------------
 // Menu
-// -----------------------------
-
 
 // Menu Sections
 
 .widget.menusections {
 	margin: 0 0 30px;
+
 	ul {
 		padding: 1em!important;
 		text-align: center;
+
 		li {
 			@media @mobile {
 				width: 100%;
@@ -17,15 +16,16 @@
 			}
 		}
 	}
+
 	a {
 		color: @color-swatch4;
+
 		&:hover {
 			color: @color-swatch2;
 			text-decoration: none;
 		}
 	}
 }
-
 
 // Menu Sections
 
@@ -41,6 +41,7 @@
 		margin: 0 0 1.5em;
 		padding-bottom: 30px;
 	}
+
 	.menu-name,
 	.menu-description,
 	.menu-note,
@@ -49,27 +50,30 @@
 		text-align: center;
 		padding-bottom: 0;
 	}
+
 	.menu-subsection {
 		padding: 0;
 	}
+
 	.menu-item-image-wrap {
-		//background-image: none!important;
 		background-size: cover;
 		background-position: center;
 		height: 200px;
 		margin: 10px 0;
+
 		img {
 			display: none;
 		}
 	}
+
 	.menu-item-name {
 		font-weight: @font-swatch2-font-weight;
 	}
+
 	.menu-item-description {
 		font-size: bkscale(@font-swatch5-font-size, 0.95);
 	}
 }
-
 
 // Promoted Item
 
@@ -80,12 +84,12 @@
 	border: 2px solid darken(@color-swatch1,10%);
 }
 
-
 // Nutritional Info
 
 .menu-item-nutritional-title {
 	font-size: bkscale(@font-swatch5-font-size,0.8);
 	letter-spacing: @font-swatch7-letter-spacing;
+
 	&:before {
 		border-top: 1px solid lighten(@color-swatch5, 35%);
 		content: "";
@@ -95,6 +99,7 @@
 		width: 65px;
 	}
 }
+
 .menu-item-nutritional-prop {
 	font-size: bkscale(@font-swatch5-font-size,0.85);
 	line-height: bkscale(@font-swatch5-line-height,0.85);

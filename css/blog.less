@@ -1,18 +1,18 @@
-// -----------------------------
 // Blog
-// -----------------------------
-
 
 .blog-post-item {
 	margin: 0 0 2em;
 	padding: 0 0 1.3em;
+
 	&:last-child {
 		margin-bottom: 30px;
 	}
+
 	h1.blog-post-title {
 		margin-bottom: 12px;
 		line-height: @font-swatch1-line-height;
 	}
+
 	h2.blog-post-title {
 		font-size: bkscale(@font-swatch2-font-size, 0.85);
 		line-height: bkscale(@font-swatch2-line-height, 0.8);
@@ -25,12 +25,14 @@
 
 .blog-post-more-link {
 	margin-bottom: 10px;
+
 	a {
 		background-color: @font-swatch7-background-color;
 		border-radius: 0;
 		color: @font-swatch7-color;
 		font-size: bkscale(@font-swatch5-font-size, 0.9);
 		padding: 8px 15px;
+
 		&:hover {
 			background-color: @font-swatch7-background-color-hover;
 			.transition(all, .5s, ease-in);
@@ -44,9 +46,11 @@
 	height: 250px;
 	background-size: cover;
 	background-position: center;
+
 	img {
 	    display: none;
 	}
+
 	@media @mobile {
 		margin-bottom: .5em;
 	}
@@ -54,6 +58,7 @@
 
 .blog-post-title a {
 	color: @color-swatch4;
+
 	&:hover {
 		color: @color-swatch2;
 		text-decoration: none;
@@ -63,7 +68,6 @@
 .blog-post-summary {
 	padding-bottom: 1.3em;
 }
-
 
 // Metadata
 
@@ -92,21 +96,24 @@
 
 .blog-list-footer {
 	margin: 10px 0 30px;
+
 	a {
 		padding: 6px 10px;
 		background-color: transparent;
 		color: @color-swatch2;
 		box-shadow: none;
 		font-size: bkscale(@font-swatch5-font-size, 0.96);
+
 		&:hover {
 			border-color: @color-swatch2;
 		}
+
 		&.paginate-older:before {
 			content: "\003c";
 			position: relative;
 			padding-right: 6px;
-
 		}
+
 		&.paginate-newer {
 			content: "\003e";
 			position: relative;
@@ -114,7 +121,6 @@
 		}
 	}
 }
-
 
 // Blog Post
 
@@ -130,7 +136,6 @@
 	letter-spacing: @font-swatch4-letter-spacing;
 }
 
-
 // Category Separation
 
 .blog-post-tags {
@@ -141,11 +146,11 @@
 	a:after {
 		content: ',';
 	}
+
 	&:last-child a:after {
 		content: '';
 	}
 }
-
 
 // Sharing Buttons
 
@@ -157,11 +162,11 @@
 	margin-right: 6px;
 }
 
-
 // Blog Search
 
 .blog-search-form {
 	margin-bottom: 30px;
+
 	label {
 		position: relative;
 		top: -5px;
@@ -173,6 +178,7 @@
 		letter-spacing: @font-swatch4-letter-spacing;
 		color: @font-swatch4-color;
 	}
+
 	input {
         height: 35px;
         border: 1px solid darken(@color-swatch1,10%);
@@ -180,12 +186,14 @@
     	-webkit-appearance: none;
         -moz-appearance: none;
         border-radius: 0;
+
         @media @mobile {
             width: 100%;
             max-width: 100%;
             margin-bottom: 12px;
         }
 	}
+	
 	button {
 		&:hover {
 			cursor: pointer;
