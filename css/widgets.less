@@ -95,13 +95,23 @@ button {
 
 .widget {
 	&.profile, &.signupform, &.blogsearch {
+		.form-group {
+			display: flex;
+			align-items: center;
+
+			@media @mobile {
+				display: block;
+			}
+		}
+
 		form fieldset input, form input, input, button, button.btn {
 			border: 1px solid darken(@font-swatch7-background-color, 8%);
 			border-radius: 0;
 			padding-left: 15px;
 			padding-right: 20px;
 			position: relative;
-			height: 48px;
+			min-height: 48px;
+			word-break: break-word;
 		}
 	}
 }
