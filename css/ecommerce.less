@@ -82,6 +82,131 @@
     }
 }
 
+.widget.ecomproductslist  {
+    .ecom-productslist {
+        &-products {
+            margin-left: 0;
+            max-width: none;
+            overflow: hidden;
+        }
+
+        &-product {
+            display: block;
+            float: left;
+            width: 100%/3;
+            margin: 0 0 30px;
+            margin-bottom: 30px;
+            padding: 10px;
+            overflow: auto;
+            
+            @media @tablet {
+                width: 100%/2;
+            }
+            
+            @media @mobile {
+                width: 100%;
+            }
+
+            .responsivecolumns & {
+                width: 100%;
+            }
+        }
+
+        &-image-wrap {
+            background-position: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    .productlist-filter {
+        margin: 0 auto;
+
+        .productlist-display-form {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -10px;
+            padding: 10px 5px;
+
+            .form-group {
+                margin: 0;
+                padding: 0 5px 20px;
+                width: auto;
+                box-sizing: border-box;
+				flex-grow: 1;
+				width: 100%/3;
+
+                .responsivecolumns & {
+					width: 100%;
+                }
+					
+				@media @mobile {
+					width: 100%;
+				}
+
+                label {
+                    display: block;
+                    padding-bottom: .4em;
+                }
+
+                select {
+                    width: 100%;
+
+                    .responsivecolumns & {
+                        width: 100%;
+                    }
+                }
+
+                button.btn {
+                    line-height: 24px;
+                    font-size: 14px;
+                    padding: 8px 30px;
+                    display: inline-block;
+                    cursor: pointer;
+                    margin: 0;
+                }
+		
+				&.productlist-search {
+					display: flex;
+					flex-wrap: wrap;
+					width: auto;
+
+                    label {
+                        width: 100%;
+                    }
+		
+					input {
+						flex-grow: 1;
+
+                        .responsivecolumns & {
+                            width: 100%;
+                        }
+					
+						@media @mobile {
+							width: 100%;
+						}
+                    }
+				
+					.btn {
+                        bottom: 20px;
+
+                        .responsivecolumns & {
+                            position: static;
+                            margin: 10px 0;
+                            width: 100%;
+                        }
+
+						@media @mobile {
+                            position: static;
+                            margin: 10px 0;
+                            width: 100%;
+						}
+					}
+                }
+            }
+        }
+    }
+}
+
 // Product Title
 
 .ecom-productslist-title,
