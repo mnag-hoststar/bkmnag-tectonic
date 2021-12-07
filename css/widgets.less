@@ -1,4 +1,4 @@
-// Buttons
+// BUTTONS
 
 button.btn,
 .signupform fieldset button,
@@ -85,13 +85,14 @@ button {
 	padding-left: 40px;
 }
 
-.widget.dropbox .file-name, .widget.dropbox .file-name:hover {
+.widget.dropbox .file-name,
+.widget.dropbox .file-name:hover {
 	background: transparent;
 	color: @color-swatch4;
 	padding-left: 8px;
 }
 
-// Forms
+// FORMS
 
 .widget {
 	&.profile, &.signupform, &.blogsearch {
@@ -226,7 +227,9 @@ select,
 
 // Inputs + Button
 
-.widget.profile form fieldset input, .widget.signupform form fieldset input, .widget.blogsearch form input {
+.widget.profile form fieldset input,
+.widget.signupform form fieldset input,
+.widget.blogsearch form input {
 	width: 70%;
 
 	@media @mobile {
@@ -259,7 +262,8 @@ select,
 
 // Mobile Buttons
 
-.widget.profile form fieldset button.btn, .widget.signupform fieldset button.btn {
+.widget.profile form fieldset button.btn,
+.widget.signupform fieldset button.btn {
 	@media @mobile {
 		left: 0;
 		border-radius: 0;
@@ -311,61 +315,49 @@ select,
 	}
 }
 
-// Social Icons
+// SOCIAL ICONS
 
-
-.widget.socialicons span a, .widget.socialicons span a:hover, .widget.profile .bk-profile-socialicons span a, .widget.profile .bk-profile-socialicons span a:hover {
-	background-color: transparent;
-	border: 2px solid @color-swatch3;
-	.border-radius(50px);
-	color: @color-swatch3;
-	height: 38px;
-	width: 38px;
-
-	@media @mobile {
-		height: 36px;
-		width: 36px;
+.widget.socialicons,
+.widget.profile .bk-profile-socialicons {
+	span a,
+	span a:hover {
+		background-color: transparent;
+		border: 2px solid @color-swatch3;
+		.border-radius(50px);
+		color: @color-swatch3;
+		height: 38px;
+		width: 38px;
+	
+		@media @mobile {
+			height: 36px;
+			width: 36px;
+		}
 	}
-}
 
-.svg {
 	.bk-socialicons-linkedin a {
+		background-image: image('/images/icons/linkedin.png');
 		background-image: image('/images/icons/linkedin.svg');
 	}
 	.bk-socialicons-twitter a {
+		background-image: image('/images/icons/twitter.png');
 		background-image: image('/images/icons/twitter.svg');
 	}
 	.bk-socialicons-facebook a {
+		background-image: image('/images/icons/facebook.png');
 		background-image: image('/images/icons/facebook.svg');
 	}
 	.bk-socialicons-rss a {
+		background-image: image('/images/icons/rss.png');
 		background-image: image('/images/icons/rss.svg');
 	}
 	.bk-socialicons-googleplus a {
+		background-image: image('/images/icons/googleplus.png');
 		background-image: image('/images/icons/googleplus.svg');
 	}
 	.bk-socialicons-youtube a {
+		background-image: image('/images/icons/youtube.png');
 		background-image: image('/images/icons/youtube.svg');
 	}
-}
-
-.bk-socialicons-linkedin a {
-	background-image: image('/images/icons/linkedin.png');
-}
-.bk-socialicons-twitter a {
-	background-image: image('/images/icons/twitter.png');
-}
-.bk-socialicons-facebook a {
-	background-image: image('/images/icons/facebook.png');
-}
-.bk-socialicons-rss a {
-	background-image: image('/images/icons/rss.png');
-}
-.bk-socialicons-googleplus a {
-	background-image: image('/images/icons/googleplus.png');
-}
-.bk-socialicons-youtube a {
-	background-image: image('/images/icons/youtube.png');
 }
 
 // General Widgets
@@ -374,7 +366,7 @@ div[role="main"] .widget {
 	margin-bottom: 10px;
 }
 
-// Gallery
+// GALLERY
 
 .widget.gallery {
 	margin: 20px 0 20px -0.5%;
@@ -469,10 +461,9 @@ div[role="main"] .widget {
 	}
 }
 
-// Slideshow
+// SLIDESHOW
 
 .widget.responsiveslideshow {
-
 	.slideshow-widget {
 		.btns-move {
 			-webkit-user-select: none;
@@ -590,17 +581,17 @@ div[role="main"] .widget {
 			padding-left: 0;
 		}
 	}
-}
 
-.widget.responsiveslideshow .slideshow-image-list,
-.widget.responsiveslideshow .slideshow-widget {
-	@media @mobile {
-		height: 230px;
-		min-height: 250px;
+	.slideshow-image-list,
+	.slideshow-widget {
+		@media @mobile {
+			height: 230px;
+			min-height: 250px;
+		}
 	}
 }
 
-// Twitter
+// TWITTER
 
 .widget.twitter {
 	margin: 20px 0;
@@ -652,7 +643,10 @@ div[role="main"] .widget {
 			letter-spacing: @font-swatch4-letter-spacing;
 		}
 
-		p a, span, a .bk-full-name, p:last-child {
+		p a,
+		span,
+		a .bk-full-name,
+		p:last-child {
 			display: inline-block;
 			color: @font-swatch5-color;
 			font-family: @font-swatch5-font-family;
@@ -663,7 +657,8 @@ div[role="main"] .widget {
 
 		// Tweet Link
 
-		p a, a:hover span.bk-full-name {
+		p a,
+		a:hover span.bk-full-name {
 			font-family: @font-swatch5-font-family;
 			font-size: @font-swatch5-font-size;
 			color: @color-swatch2;
@@ -703,19 +698,19 @@ div[role="main"] .widget {
 	}
 }
 
-// Dividing Line
+// LINE
 
 hr.line {
 	background-color: lighten(@color-swatch5, 35%);
 }
 
-// Facebook Comments (Responsive)
+// FACEBOOK COMMENTS
 
 .fb_iframe_widget_fluid span, .fb_iframe_widget iframe {
     width: 100%!important;
 }
 
-// Yelp
+// YELP
 
 .widget.yelpreview {
 	background-color: lighten(@color-swatch5, 45%);
