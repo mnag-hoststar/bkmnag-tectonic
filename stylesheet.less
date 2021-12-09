@@ -1,4 +1,11 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
+
+@desktop-small: ~"only screen and (max-width: 1060px)";
+@tablet-small: ~"only screen and (max-width: 769px)";
+@mobile-large: ~"only screen and (max-width: 530px)";
+@mobile-smaller: ~"only screen and (max-width: 380px)";
+@mobile-smallest: ~"only screen and (max-width: 360px)";
+
 @import "@{templateLocal}/css/widgets.less";
 @import "@{templateLocal}/css/grid.less";
 @import "@{templateLocal}/css/blog.less";
@@ -334,7 +341,7 @@
 		text-overflow: ellipsis;
 		
 		.language-selector--flag-text& {
-			@media only screen and (max-width: 380px) {
+			@media @mobile-smaller {
 				display: none;
 			}
 		}
@@ -529,7 +536,7 @@
     }
 }
 
-@media only screen and (max-width: 769px) {
+@media @tablet-small {
 	.widget.extendednavigation .bk-overlay {
 		top: -40px!important;
 	}
