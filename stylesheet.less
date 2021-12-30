@@ -459,8 +459,6 @@
 	}
 }
 
-// Navigation
-
 .widget.extendednavigation {
 	padding: 0 40px;
 
@@ -490,8 +488,6 @@
 
 			@media @tablet {
 				padding: 18px 0;
-			}    
-		}
 			}    
 		}
 
@@ -643,37 +639,71 @@ h5 {
     color: @font-swatch4-color;
 }
 
-	@media @mobile {
-		padding: 30px;
+// Normal Text
+
+.widget {
+	p, span, small, pre, code,
+	table, th, td,
+	&.content {
+		color: @font-swatch5-color;
+	
+		.style--light & {
+			color: @contrast--light;
+		}
+	
+		.style--accent & {
+			color: @contrast--accent;
+		}
+	
+		.style--dark & {
+			color: @contrast--dark;
+		}
 	}
 }
 
-.widget.feature .feature-bgimg .content button.btn {
-	background: transparent;
-	border: 2px solid @color-swatch1;
-	border-radius: 0;
-	margin-top: 25px;
-	padding: 8px 24px 8px;
-	text-transform: uppercase;
-	.transition(all, .3s, ease-out);
+// Preformatted and Code Text
 
-	&:hover {
-		background-color: @color-swatch1;
-		color: @color-swatch2;
-		.transition(all, .3s, ease-in);
+pre, code {
+	display: block;
+	margin: 1em 0;
+	padding: 0.5em 1em;
+	border: none;
+	.border-radius(0);
+	background-color: darken(@color-swatch1, 10%);
+	overflow: auto;
+	.paragraph;
+	font-family: monospace;
+
+	.style--light & {
+		background-color: darken(@color--light, 10%);
+	}
+
+	.style--accent & {
+		background-color: lighten(@color--accent, 10%);
+	}
+
+	.style--dark & {
+		background-color: lighten(@color--dark, 10%);
 	}
 }
 
-// Main
+code {
+	border-left: 1px solid @color-swatch5;
 
-h1, h2, h3, h4, h5, h6, a, p, ol, ul {
-	word-break: break-word;
+	.style--light & {
+		border-color: @color--accent;
+	}
+
+	.style--accent & {
+		border-color: @contrast--accent;
+	}
+
+	.style--dark & {
+		border-color: @color--accent;
+	}
 }
 
-h5 {
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch4-color;
-}
+// Blockquote
 
 blockquote {
     background-color: fade(@color-swatch3, 10%);
