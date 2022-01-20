@@ -725,7 +725,26 @@ blockquote {
     font-size: @font-swatch4-font-size;
     font-weight: 300;
     line-height: @font-swatch3-line-height;
+	color: @font-swatch5-color;
 	word-break: break-word;
+
+	.style--light & {
+		background-color: fade(@color--accent, 10%);
+		border-color: @color--accent;
+		color: @contrast--light;
+	}
+
+	.style--accent & {
+		background-color: fade(@contrast--accent, 10%);
+		border-color: @contrast--accent;
+		color: @contrast--accent;
+	}
+
+	.style--dark & {
+		background-color: fade(@color--accent, 10%);
+		border-color: @color--accent;
+		color: @contrast--dark;
+	}
 
     &:before {
         display: none;
