@@ -467,6 +467,7 @@ body {
 
 // Navigation
 
+.widget.navigation,
 .widget.extendednavigation {
 	padding: 0 40px;
 
@@ -475,56 +476,14 @@ body {
 		margin-left: 0;
 		width: 100%;
 	}
-
-	ul {
-		@media @tablet {
-			padding-top: 0;
-			padding-bottom: 40px;
+	
+	.bk-overlay {
+		@media @tablet-small {
+			top: -40px !important;
 		}
 	}
 
-	ul li {
-		@media @tablet {
-			border-bottom: 1px solid fade(@color-swatch1, 10%);
-			padding: 0.5em 0;
-		}
-
-		&.folder {
-			.text {
-				color: fade(@font-swatch6-color, 70%);
-			}
-
-			@media @tablet {
-				padding: 18px 0;
-			}    
-		}
-
-		a {
-			color: fade(@font-swatch6-color, 70%);
-			
-			@media @tablet {
-				padding: 10px 0;
-			}
-		}
-	}
-
-	ul li.folder ul li a {
-		padding: 10px 0;
-	}
-
-	ul li:hover ul {
-		background-color: fade(@color-swatch3, 95%);
-
-		li {
-			padding: 8px 20px;
-		}
-
-		li:last-child {
-			@media @tablet {
-				border-bottom: none;
-			}
-		}
-	}
+	// Mobile Menu
 
 	a.pull {
 		top: -68px;
@@ -536,17 +495,109 @@ body {
 			box-shadow: 0 9px 0 @font-swatch6-color, 0 18px 0 @font-swatch6-color;
 		}
 	}
-}
 
-.widget .extendednavigation li > .text {
-    @media @tablet {
-        padding: 0;
-    }
-}
+	// Menu Points
 
-.widget.extendednavigation .bk-overlay {
-	@media @tablet-small {
-		top: -40px !important;
+	ul {
+		@media @tablet {
+			padding-top: 0;
+			padding-bottom: 40px;
+		}
+
+		// Menu Point
+		
+		li {
+			@media @tablet {
+				border-bottom: 1px solid fade(@color-swatch1, 10%);
+				padding: 0.5em 0;
+			}
+	
+			a {
+				color: fade(@font-swatch6-color, 70%);
+				
+				@media @tablet {
+					padding: 10px 0;
+				}
+			}
+
+			// Folder
+	
+			&.folder {
+				@media @tablet {
+					padding: 18px 0;
+				}
+	
+				&:after {
+					content: none;
+				}
+
+				> .text {
+					color: fade(@font-swatch6-color, 70%);
+
+					@media @tablet {
+						padding: 0;
+					}
+		
+					// Folder Arrow
+
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 50%;
+						right: 0.5em;
+						border: 2px solid fade(@font-swatch6-color, 60%);
+						border-top: transparent;
+						border-left: transparent;
+						transform: rotate(45deg);
+						margin-top: -0.5em;
+						width: 0.5em;
+						height: 0.5em;
+					}
+				
+					&:hover:after {
+						border-color: @font-swatch6-color-hover;
+					}
+				}
+
+				// Dropdown
+			
+				> ul,
+				&:hover > ul {
+					display: none;
+					background-color: fade(@color-swatch3, 95%);
+
+					@media @tablet {
+						display: none;
+					}
+			
+					li {
+						padding: 8px 20px;
+						
+						a {
+							padding: 10px 0;
+						}
+			
+						&:last-child {
+							@media @tablet {
+								border-bottom: none;
+							}
+						}
+					}
+				}
+			}
+	
+			// Folder Open
+	
+			&.folder-open ul,
+			&.folder-open:hover ul {
+				display: block;
+
+				@media @tablet {
+					display: block;
+				}
+			}
+		}
 	}
 }
 
