@@ -56,27 +56,6 @@ button:disabled {
 	}
 }
 
-button {
-	outline: none;
-}
-
-.blog-search-submit-button {
-	border: none;
-}
-
-.widget.paypalbuynow .widget.button.paypal,
-.widget.tweet a,
-.widget.dropbox button {
-	padding-left: 40px;
-}
-
-.widget.dropbox .file-name,
-.widget.dropbox .file-name:hover {
-	background: transparent;
-	color: @color-swatch4;
-	padding-left: 8px;
-}
-
 .widget button.btn span {
 	color: @font-swatch7-color;
 
@@ -161,20 +140,9 @@ label, .label,
 input,
 textarea,
 select,
-.contactform input,
-.contactform select,
-.contactform textarea,
-.signupform fieldset input,
-.advancedcontactform select
-.signupform fieldset input.email,
-.advancedcontactform input,
-.advancedcontactform textarea,
-.userregistration fieldset input,
-.widget.profile form fieldset input,
-.blogsearch input.blog-search-input,
-.productlist-filter .productlist-search input,
-.widget input[type="text"],
-.widget input[type="email"],
+form input,
+form textarea,
+form select,
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
 	border: 0;
@@ -183,9 +151,14 @@ input:-webkit-autofill:focus {
 	height: 40px;
 }
 
-select,
-.contactform select,
-.advancedcontactform select {
+textarea {
+	background-color: fade(@color-swatch2, 10%);
+	border: 0;
+	min-height: 100px;
+	padding: 8px 12px;
+}
+
+select {
 	padding-right: 2.2em;
     width: 100%;
     .appearance(none) !important;
@@ -196,25 +169,6 @@ select,
 
 	&::-ms-expand {
 		display: none;
-	}
-}
-
-.contactform textarea, .advancedcontactform textarea {
-	background-color: fade(@color-swatch2, 10%);
-	border: 0;
-	min-height: 100px;
-	padding: 8px 12px;
-}
-
-// Radio Buttons, Checkboxes
-
-.contactform .option-item--radio,
-.contactform .option-item--checkbox,
-.advancedcontactform .option-item--radio,
-.advancedcontactform .option-item--checkbox {
-	label {
-		.label;
-		word-break: break-word;
 	}
 }
 
