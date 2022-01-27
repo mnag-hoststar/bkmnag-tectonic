@@ -158,6 +158,21 @@ textarea {
 	padding: 8px 12px;
 }
 
+// Dropdown
+
+.select-wrap {
+	position: relative;
+	max-width: 50%;
+
+	@media @mobile {
+		max-width: 100%;
+	}
+
+	.responsivecolumns & {
+		max-width: 100%;
+	}
+}
+
 select {
 	padding-right: 2.2em;
     width: 100%;
@@ -169,6 +184,11 @@ select {
 
 	&::-ms-expand {
 		display: none;
+	}
+	
+	option {
+		background-color: @color-swatch1;
+		color: @font-swatch5-color;
 	}
 }
 
