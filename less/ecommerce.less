@@ -379,10 +379,6 @@
     
         .btn.ecom-product-add-to-cart-btn {
             padding: 10px 30px 10px 50px;
-            background-image: image('/images/ic-basket.svg');
-            background-repeat: no-repeat;
-            background-position: 15% 50%;
-            background-size: 14px;
             font-size: @font-swatch7-font-size;
             width: 100%;
     
@@ -394,21 +390,43 @@
             }
             
             .text:before {
-                display: none;
+                content: '\f291';
+                display: inline-block;
+                top: 0;
+                margin-top: -0.25em;
+                margin-right: 0.5em;
+                background-image: none;
+                height: 1.5em;
+                width: 1.5em;
+                font-family: 'FontAwesome';
+                text-indent: 0;
+                font-size: 1.25em;
             }
     
             // Added
     
             &.added {
-                background-image: image('/images/ic-tick.svg');
                 background-color: @color-swatch1;
-                background-size: 20px;
                 border-color: #45D645;
                 box-shadow: none;
     
                 &:hover {
                     color: @color-swatch4;
                 }
+
+				.text:before {
+					content: '\f00c';
+					display: inline-block;
+					top: 0;
+					margin-top: -0.25em;
+					margin-right: 0.5em;
+					background-image: none;
+					height: 1.5em;
+					width: 1.5em;
+					font-family: 'FontAwesome';
+					text-indent: 0;
+					font-size: 1.25em;
+				}
             }
         }
         
@@ -501,9 +519,6 @@
     .ecombasket-pull {
         width: 142px;
         padding: 8px 14px 8px 22px;
-        background-image: image('/images/ic-basket-view.svg');
-        background-repeat: no-repeat;
-        background-position: 11% 50%;
         background-size: 16px;
         -webkit-font-smoothing: antialiased;
         .transition(all, 0.3s, ease);
@@ -533,7 +548,17 @@
         }
 
         p:before {
-            display: none;
+            content: '\f291';
+            display: inline-block;
+            top: 0;
+            margin-top: -0.25em;
+            margin-right: 0.5em;
+            background-image: none;
+            height: 1.5em;
+            width: 1.5em;
+            font-family: 'FontAwesome';
+            text-indent: 0;
+            font-size: 1.25em;
         }
     }
 
@@ -672,7 +697,8 @@
         color: lighten(@color-swatch5, 25%);
     }
 
-    .basket-summary-quantitybtn, .basket-summary-quantity .basket-summary-quantity-text {
+    .basket-summary-quantitybtn,
+    .basket-summary-quantity .basket-summary-quantity-text {
         display: inline-block;
     }
 
@@ -704,7 +730,7 @@
 
         .quantity-number {
             position: relative;
-            background-color: darken(@color-swatch1,3%);
+            background-color: darken(@color-swatch1, 3%);
             padding: 1px 10px;
             font-size: 14px;
         }

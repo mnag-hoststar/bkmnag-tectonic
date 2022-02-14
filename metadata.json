@@ -1,9 +1,20 @@
 {
     "name":"Tectonic",
-    "thumbnail":"thumbnail.png",
-    "screenshot":"tectonic-screenshot.jpg",
+    "thumbnail":"images/thumbnail.png",
+    "screenshot":"images/screenshot.jpg",
     "templateType":"standard",
     "tags": { "en": ["business", "modern", "dark", "social", "contrast", "space", "architecture", "minimalism"] },
+	"images":[
+		"images/feature-bg.jpg",
+		"images/gallery/1.jpg",
+		"images/gallery/2.jpg",
+		"images/gallery/3.jpg",
+		"images/gallery/4.jpg",
+		"images/gallery/5.jpg",
+		"images/gallery/6.jpg",
+		"images/gallery/7.jpg",
+		"images/gallery/8.jpg"
+	],
     "pageTypes":["home"],
     "colorSwatches":
     {

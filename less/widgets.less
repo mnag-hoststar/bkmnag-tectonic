@@ -3,18 +3,22 @@
 .btn,
 button.btn,
 button.button,
-.widget.profile form button,
+.contactform button,
+.contactform button.btn,
+.advancedcontactform button,
+.advancedcontactform button.btn,
 .widget.tweet a,
-.widget.dropbox button,
-.widget.paypalbuynow .widget.button.paypal,
 .widget.clicktocall a,
+.widget.dropbox button,
+.widget.filedownload button.btn,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.socialicons span a,
+footer.bk-footer .widget.profile .bk-profile-socialicons span a,
 .widget.feature .feature-bgimg .content button,
 .userregistration fieldset .userregistrationbtn,
-.widget.socialicons span a,
 .widget.yelpreview .review-body .review-link a,
-.blog-post-more-link a,
 form.blog-search-form .form-group button,
-a.contentgroup__link {
+.blog-post-more-link a {
 	outline: none;
 	background-color: @font-swatch7-background-color;
 	color: @font-swatch7-color;
@@ -75,29 +79,146 @@ button:disabled {
 // Image Buttons
 
 .widget.tweet a,
+.widget.clicktocall a,
 .widget.dropbox button,
-.widget.paypalbuynow .widget.button.paypal,
-.widget.filedownload .btn,
-.widget.clicktocall a {
-	padding-left: 40px;
-	background-position: 18px center;
-
-	&:hover {
-		padding-left: 40px;
-		background-position: 18px center;
+.widget.filedownload button.btn {
+	&, &:hover, &:focus {
+		background-image: none;
 	}
 }
 
-.widget.clicktocall a {
-	&, &:hover, &:focus {
-		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpENTg4MDkxNUI0RDcxMUUyOUZDMDhBQzY4M0VGNzM1QiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpENTg4MDkxNkI0RDcxMUUyOUZDMDhBQzY4M0VGNzM1QiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjYxMkE4MzU2QjRCQjExRTI5RkMwOEFDNjgzRUY3MzVCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQ1ODgwOTE0QjRENzExRTI5RkMwOEFDNjgzRUY3MzVCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+s2QrvwAAAPxJREFUeNpi/P//PwM1ARMDlQE2A7uAGOTsHWSZCPIyFHMC8cz/qMASSZ4ojOzCCUCchmafOyVeVsIiHwXE7OQa+BaLPC8Uk2XgdiD+icR/DMS2QPyG3EhhAeIFSBEyk9QIAadpNAFDJAP/ArE+pQaCcDOSoSepYSAIH0EydCuaHCMQ8wIxEykGigHxPSRDzwOxGlQuDIi/AfExIG4BYn8gFiBkIAjLAfFjJEM/AfFGIH7zHxMcAGJ1QgaCsDAQn/hPGDwCYhdiDIThRgIGNhPjZXSsAsQLockJGUxHVsdIYgELylmJQOwHxPxAfAGIa4D4C0wB46AvsQECDAB0BaRrDCyrSQAAAABJRU5ErkJggg==);
+.widget.tweet a,
+.widget.clicktocall a,
+.widget.dropbox button span,
+.widget.filedownload button.btn {
+	&:before {
+		float: left;
+		padding-right: 0.5em;
+		background-image: none;
+		font-family:'FontAwesome';
+		font-size: 1.5em;
+	}
+}
+
+.widget.tweet a:before {content: '\f099';}
+.widget.clicktocall a:before {content: '\f095';}
+.widget.dropbox button span:before {content: '\f16b';}
+.widget.filedownload button.btn:before {content: '\f019';}
+
+.widget.paypalbuynow .widget.button.paypal {
+	padding-left: 3.2em;
+    background-size: 1.2em;
+    background-position: 1.25em center;
+}
+
+// Social Icons
+
+.social {
+	padding: 40px;
+	text-align: right;
+
+	@media @tablet {
+		background: @color-swatch2;
+		display: table-header-group;
+		margin-left: 0;
+		margin-top: 30px;
+		text-align: center;
+		width: 100%;
+	}
+}
+
+.widget.socialicons,
+footer.bk-footer .widget.profile .bk-profile-socialicons {
+	margin: 0;
+
+	span {
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-image: none;
+			margin: 0 5px 10px;
+			padding: 0;
+			background-color: fade(@color-swatch1, 80%);
+			border: 2px solid @color-swatch3;
+			color: @color-swatch3;
+			width: 38px;
+			height: 38px;
+			min-height: 38px;
+			.border-radius(50%);
+			text-indent: 0;
+			font-size: 0;
+		
+			@media @mobile {
+				width: 36px;
+				height: 36px;
+			}
+
+			.style--light & {
+				background-color: fade(@contrast--light, 80%);
+				border-color: @color--dark;
+				color: @color--dark;
+			}
+		
+			.style--accent & {
+				background-color: fade(@contrast--accent, 80%);
+				border-color: @color--dark;
+				color: @color--dark;
+			}
+		
+			.style--dark & {
+				background-color: fade(@contrast--dark, 80%);
+				border-color: @color--accent;
+				color: @color--accent;
+			}
+
+			&:hover {
+				background-color: @color-swatch1;
+
+				.style--light & {
+					background-color: @contrast--light;
+				}
+			
+				.style--accent & {
+					background-color: @contrast--accent;
+				}
+			
+				.style--dark & {
+					background-color: @contrast--dark;
+				}
+			}
+
+			&:before {
+				font-family: 'FontAwesome';
+				text-indent: 0;
+				font-size: 24px;
+			}
+		}
+
+		&.bk-socialicons-linkedin a:before {content: '\f0e1';}
+		&.bk-socialicons-twitter a:before {content: '\f099';}
+		&.bk-socialicons-instagram a:before {content: '\f16d';}
+		&.bk-socialicons-pinterest a:before {content: '\f0d2';}
+		&.bk-socialicons-facebook a:before {content: '\f09a';}
+		&.bk-socialicons-rss a:before {content: '\f09e';}
+		&.bk-socialicons-vkontakte a:before {content: '\f189';}
+		&.bk-socialicons-xing a:before {content: '\f168';}
+		&.bk-socialicons-youtube a:before {content: '\f16a';}
+	}
+
+	.icons {
+		@media @tablet {
+			padding: 0;
+		}
 	}
 }
 
 // FORMS
 
 .widget {
-	&.profile, &.signupform, &.blogsearch {
+	&.profile,
+	&.signupform,
+	&.blogsearch {
 		.form-group {
 			display: flex;
 			align-items: center;
@@ -107,7 +228,11 @@ button:disabled {
 			}
 		}
 
-		form fieldset input, form input, input, button, button.btn {
+		form fieldset input,
+		form input,
+		input,
+		button,
+		button.btn {
 			border: 1px solid darken(@font-swatch7-background-color, 8%);
 			border-radius: 0;
 			padding-left: 15px;
@@ -490,51 +615,6 @@ select {
 	label[for*="input--terms"] span a.form__link {
 		text-decoration: underline;
 		border: none;
-	}
-}
-
-// SOCIAL ICONS
-
-.widget.socialicons,
-.widget.profile .bk-profile-socialicons {
-	span a,
-	span a:hover {
-		background-color: transparent;
-		border: 2px solid @color-swatch3;
-		.border-radius(50px);
-		color: @color-swatch3;
-		height: 38px;
-		width: 38px;
-	
-		@media @mobile {
-			height: 36px;
-			width: 36px;
-		}
-	}
-
-	.bk-socialicons-linkedin a {
-		background-image: image('/images/icons/linkedin.png');
-		background-image: image('/images/icons/linkedin.svg');
-	}
-	.bk-socialicons-twitter a {
-		background-image: image('/images/icons/twitter.png');
-		background-image: image('/images/icons/twitter.svg');
-	}
-	.bk-socialicons-facebook a {
-		background-image: image('/images/icons/facebook.png');
-		background-image: image('/images/icons/facebook.svg');
-	}
-	.bk-socialicons-rss a {
-		background-image: image('/images/icons/rss.png');
-		background-image: image('/images/icons/rss.svg');
-	}
-	.bk-socialicons-googleplus a {
-		background-image: image('/images/icons/googleplus.png');
-		background-image: image('/images/icons/googleplus.svg');
-	}
-	.bk-socialicons-youtube a {
-		background-image: image('/images/icons/youtube.png');
-		background-image: image('/images/icons/youtube.svg');
 	}
 }
 

@@ -6,11 +6,11 @@
 @mobile-smaller: ~"only screen and (max-width: 380px)";
 @mobile-smallest: ~"only screen and (max-width: 360px)";
 
-@import "@{templateLocal}/css/widgets.less";
-@import "@{templateLocal}/css/grid.less";
-@import "@{templateLocal}/css/blog.less";
-@import "@{templateLocal}/css/ecommerce.less";
-@import "@{templateLocal}/css/menu.less";
+@import "@{templateLocal}/less/widgets.less";
+@import "@{templateLocal}/less/grid.less";
+@import "@{templateLocal}/less/blog.less";
+@import "@{templateLocal}/less/ecommerce.less";
+@import "@{templateLocal}/less/menu.less";
 
 // Page Settings
 
@@ -392,49 +392,6 @@ body {
 	    display: inline-block;
 		width: 100%;
 		border-top: 1px solid fade(@color-swatch1, 10%);
-	}
-}
-
-.social {
-	padding: 40px;
-	text-align: right;
-
-	@media @tablet {
-		background: @color-swatch2;
-		display: table-header-group;
-		margin-left: 0;
-		margin-top: 30px;
-		text-align: center;
-		width: 100%;
-	}
-
-	.widget.socialicons {
-		margin: 0;
-
-		span a {
-			background-color: fade(@color-swatch1, 80%);
-			border: 0;
-			.border-radius(100px);
-			margin-bottom: 0;
-			height: 32px;
-			width: 32px;
-			background-size: 16px;
-
-			&:hover {
-			    background-color: @color-swatch1;
-			}
-
-			@media @tablet {
-				height: 32px;
-				width: 32px;
-			}
-		}
-
-		.icons {
-			@media @tablet {
-				padding: 15px 0 10px;
-			}
-		}
 	}
 }
 
@@ -1082,10 +1039,6 @@ tr:last-child td {
 
 .bk-footer {
 	border-top: 1px solid fade(@color-swatch2, 20%);
-	
-	.widget.profile .bk-profile-socialicons span a, .widget.profile .bk-profile-socialicons span a:hover {
-		background-color: transparent;
-	}
 
 	.widget.profile {
         form fieldset input {

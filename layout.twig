@@ -1,18 +1,15 @@
 <!doctype html>
 <html lang="{{ page.seoLang }}">
-
 	<head>
 		{% include 'includes/head.twig' %}
 		{% include basekit.headScript %}
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	</head>
 
 	<body class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
-
-			{% block content %}
-			{% endblock %}
-
+		{% block content %}
+		{% endblock %}
 		{% include 'includes/footer.twig' %}
-
 		{% include basekit.bodyScript %}
 
 		<script type="text/javascript">
@@ -26,6 +23,5 @@
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="{{ asset('libs/jquery-1.10.2.min.js')}}"><\/script>')</script>
-
 	</body>
 </html>
