@@ -64,7 +64,7 @@ button:disabled {
 	color: @font-swatch7-color;
 
 	.style--light & {
-		color: @contrast--accent;
+		color: @font-swatch7-color;
 	}
 
 	.style--accent & {
@@ -155,9 +155,9 @@ footer.bk-footer .widget.profile .bk-profile-socialicons {
 			}
 
 			.style--light & {
-				background-color: fade(@contrast--light, 80%);
-				border-color: @color--dark;
-				color: @color--dark;
+				background-color: fade(@color-swatch1, 80%);
+				border-color: @color-swatch3;
+				color: @color-swatch3;
 			}
 		
 			.style--accent & {
@@ -176,7 +176,7 @@ footer.bk-footer .widget.profile .bk-profile-socialicons {
 				background-color: @color-swatch1;
 
 				.style--light & {
-					background-color: @contrast--light;
+					background-color: @color-swatch1;
 				}
 			
 				.style--accent & {
@@ -513,18 +513,6 @@ select {
 			line-height: @font-swatch5-line-height;
 			letter-spacing: @font-swatch5-letter-spacing;
 		}
-
-		.style--light & {
-			color: @contrast--light;
-		}
-
-		.style--accent & {
-			color: @contrast--accent;
-		}
-
-		.style--dark & {
-			color: @contrast--dark;
-		}
 			
 		&:before,
 		&:after {
@@ -545,7 +533,7 @@ select {
 			border: 1px solid @font-swatch7-background-color;
 
 			.style--light & {
-				border-color: @color--accent;
+				border-color: @font-swatch7-background-color;
 			}
 
 			.style--accent & {
@@ -577,8 +565,8 @@ select {
 			transform: scale(50%);
 
 			.style--light & {
-				background-color: @color--accent;
-				border: 1px solid @color--accent;
+				background-color: @font-swatch7-background-color;
+				border: 1px solid @font-swatch7-background-color;
 			}
 
 			.style--accent & {
@@ -603,7 +591,7 @@ select {
 			transform: scale(50%) rotate(45deg);
 
 			.style--light & {
-				box-shadow: -6px -6px 0 0 inset @color--accent;
+				box-shadow: -6px -6px 0 0 inset @font-swatch7-background-color;
 			}
 
 			.style--accent & {
@@ -853,7 +841,7 @@ div[role="main"] .widget {
 			border: 1px solid @color-swatch2;
 
             .style--light & {
-                border-color: @color--accent;
+                border-color: @color-swatch2;
             }
         
             .style--accent & {
@@ -869,8 +857,8 @@ div[role="main"] .widget {
 				border: 1px solid @color-swatch2;
 
                 .style--light & {
-                    background-color: @color--accent;
-					border: 1px solid @color--accent;
+                    background-color: @color-swatch2;
+					border: 1px solid @color-swatch2;
                 }
             
                 .style--accent & {
