@@ -109,13 +109,13 @@
 		}
 
 		&.paginate-older:before {
-			content: "\003c";
+			content: '\003c';
 			position: relative;
 			padding-right: 6px;
 		}
 
 		&.paginate-newer {
-			content: "\003e";
+			content: '\003e';
 			position: relative;
 			padding-left: 6px;
 		}
@@ -142,13 +142,14 @@
 	margin-bottom: 10px;
 }
 
+.blog-post-category,
 .blog-post-tag {
-	a:after {
-		content: ',';
+	&:after {
+		content: '',\00a0';
 	}
 
-	&:last-child a:after {
-		content: '';
+	&:last-child:after {
+		content: none;
 	}
 }
 

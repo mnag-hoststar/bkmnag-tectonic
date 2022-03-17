@@ -140,13 +140,13 @@ body {
 
 	.language-selector.language-selector--dropdown & {
     	&:before {
-    	    content: "";
+    	    content: '';
             display: block;
     	    height: @language-line-height+2;
     	}
 
     	&:after {
-    	    content: "";
+    	    content: '';
             display: block;
     	    height: @language-padding*2;
     	}
@@ -261,7 +261,7 @@ body {
 	    &:after {
     		.language-selector.language-selector--dropdown & {
 				position: absolute;
-        		content: "\25be";
+        		content: '\25be';
         		top: 50%;
         		right: 0;
         		margin-top: -(@language-line-height/4);
@@ -510,6 +510,7 @@ body {
 
 				> .text {
 					color: fade(@font-swatch6-color, 70%);
+					word-break: break-word;
 
 					@media @tablet {
 						padding: 0;
@@ -677,28 +678,26 @@ h5 {
 
 // Normal Text
 
-.widget.content,
-.widget.content.in-editing {
-	.wysihtml-editor-content,
-	.embed-content {
-		font-size: @font-swatch5-font-size !important;
-		line-height: @font-swatch5-line-height !important;
+.widget.content .wysihtml-editor-content,
+.widget.embed .embed-content,
+.widget.content.in-editing .wysihtml-editor-content {
+	font-size: @font-swatch5-font-size !important;
+	line-height: @font-swatch5-line-height !important;
+
+	&, p, span, small, pre, code,
+	table, th, td {
+		color: @font-swatch5-color;
 	
-		&, p, span, small, pre, code,
-		table, th, td {
+		.style--light & {
 			color: @font-swatch5-color;
-		
-			.style--light & {
-				color: @font-swatch5-color;
-			}
-		
-			.style--accent & {
-				color: @contrast--accent;
-			}
-		
-			.style--dark & {
-				color: @contrast--dark;
-			}
+		}
+	
+		.style--accent & {
+			color: @contrast--accent;
+		}
+	
+		.style--dark & {
+			color: @contrast--dark;
 		}
 	}
 }
@@ -796,7 +795,7 @@ blockquote {
 	
 			&:before {
 				position: absolute;
-				content: "\2013";
+				content: '\2013';
 				left: -2em;
 			}
 		}
@@ -837,6 +836,7 @@ blockquote {
 table {
 	overflow: auto;
 	width: 100%;
+	max-width: 100%;
 	border: none;
 	border-collapse: separate;
 	border-spacing: 0;
