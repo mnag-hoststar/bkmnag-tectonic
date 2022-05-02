@@ -380,7 +380,7 @@ body {
 // Header
 
 .bk-header {
-	background-color: fade(@color-swatch2, 80%);
+	background-color: @color-swatch2;
 	position: relative;
 	-webkit-font-smoothing: antialiased;
 
@@ -390,191 +390,258 @@ body {
 }
 
 .bk-nav {
-	width: 100%;
-	display: table;
-
-	@media @tablet {
-	    background-color: @color-swatch2;
-	}
-}
-
-.brand, .social {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.brand {
+	display: flex;
+	align-items: center;
 	background-color: @color-swatch2;
-	padding: 40px;
-	width: 25%;
 
 	@media @tablet {
-	    display: inline-block;
-		width: 100%;
-		border-top: 1px solid fade(@color-swatch1, 10%);
-	}
-}
-
-.widget.logo,
-.widget.companyname,
-.widget.extendednavigation {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.widget.logo {
-	@media @tablet {
-		max-width: 100%;
-		width: auto;
-	}
-}
-
-.widget.companyname {
-	padding-left: 20px;
-
-	a {
-		font-weight: @font-swatch10-font-weight;
-		word-break: break-word;
-
-		@media @mobile {
-			font-size: bkscale(@font-swatch10-font-size, 0.85);
-		}
-	}
-}
-
-// Navigation
-
-.widget.navigation,
-.widget.extendednavigation {
-	padding: 0 40px;
-
-	@media @tablet {
-		display: block;
-		margin-left: 0;
-		width: 100%;
-	}
-	
-	.bk-overlay {
-		@media @tablet-small {
-			top: -40px !important;
-		}
+		margin-right: 70px;
 	}
 
-	// Mobile Menu
+	.brand {
+		background-color: @color-swatch2;
+		padding: 20px;
+		width: 25%;
+		display: flex;
+		align-items: center;
 
-	a.pull {
-		top: -68px;
-		right: 40px;
-
-		&:after {
-			height: 2px;
-			background: @font-swatch6-color;
-			box-shadow: 0 9px 0 @font-swatch6-color, 0 18px 0 @font-swatch6-color;
-		}
-	}
-
-	// Menu Points
-
-	ul {
 		@media @tablet {
-			padding-top: 0;
-			padding-bottom: 40px;
+			width: auto;
+			min-width: auto;
+			flex-grow: 1;
+		}
+		
+		.widget.logo {
+			display: flex;
+			min-width: 25%;
+
+			@media @tablet {
+				min-width: auto;
+				max-width: 25%;
+			}
+			
+			a .logo {
+				display: flex;
+			}
+		}
+		
+		.widget.companyname {
+			padding-left: 20px;
+
+			@media @tablet {
+				width: 75%;
+			}
+		
+			a {
+				font-weight: @font-swatch10-font-weight;
+				word-break: normal;
+		
+				@media @mobile {
+					font-size: bkscale(@font-swatch10-font-size, 0.85);
+				}
+			}
+		}
+	}
+
+	// Navigation
+	
+	.widget.navigation,
+	.widget.extendednavigation {
+		flex-grow: 1;
+		padding: 0;
+	
+		@media @tablet {
+			position: static;
+			display: block;
+			margin-left: 0;
+			flex-grow: 0;
+			order: 1;
+			width: 0;
+		}
+		
+		.bk-overlay {
+			@media @tablet-small {
+				top: -40px !important;
+			}
 		}
 
-		// Menu Point
-		
-		li {
-			@media @tablet {
-				border-bottom: 1px solid fade(@color-swatch1, 10%);
-				padding: 0.5em 0;
-			}
-	
-			a {
-				color: fade(@font-swatch6-color, 70%);
-				
-				@media @tablet {
-					padding: 10px 0;
-				}
-			}
+		.extendednavigation {
+			position: static;
 
-			// Folder
-	
-			&.folder {
+			a.pull {
 				@media @tablet {
-					padding: 18px 0;
+					position: absolute;
+					top: 50%;
+					right: 20px;
+					display: inline-block;
+					width: 26px;
+					height: 20px;
+					border: none;
+					margin-top: -10px;
+					overflow: hidden;
+					cursor: pointer;
+					outline: none;
+					padding: 0;
 				}
-	
+		
 				&:after {
-					content: none;
+					height: 2px;
+					background: @font-swatch6-color;
+					box-shadow: 0 9px 0 @font-swatch6-color, 0 18px 0 @font-swatch6-color;
 				}
+			}
+		
+			ul {
+				float: none !important;
 
-				> .text {
-					color: fade(@font-swatch6-color, 70%);
-					word-break: break-word;
-
+				@media @tablet {
+					z-index: 100;
+					float: none;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					right: 0;
+					padding: 0;
+					background-color: @color-swatch2;
+					text-align: right;
+				}
+		
+				// Menu Point
+				
+				li {
 					@media @tablet {
-						padding: 0;
+						border-bottom: 1px solid fade(@color-swatch1, 10%);
+						padding: 15px 0;
+					}
+			
+					a {
+						color: fade(@font-swatch6-color, 70%);
+						word-break: break-word;
+						
+						@media @tablet {
+							padding: 0 20px;
+						}
 					}
 		
-					// Folder Arrow
-
-					&:after {
-						content: '';
-						display: block;
-						position: absolute;
-						top: 50%;
-						right: 0.5em;
-						border: 2px solid fade(@font-swatch6-color, 60%);
-						border-top: transparent;
-						border-left: transparent;
-						transform: rotate(45deg);
-						margin-top: -0.5em;
-						width: 0.5em;
-						height: 0.5em;
-					}
-				
-					&:hover:after {
-						border-color: @font-swatch6-color-hover;
-					}
-				}
-
-				// Dropdown
+					// Folder
 			
-				> ul,
-				&:hover > ul {
-					display: none;
-					background-color: fade(@color-swatch3, 95%);
-
-					@media @tablet {
-						display: none;
-					}
-			
-					li {
-						padding: 8px 20px;
-						
-						a {
-							padding: 10px 0;
+					&.folder {
+						position: relative;
+						margin-right: 0;
+		
+						@media @tablet {
+							padding: 15px 0;
 						}
 			
-						&:last-child {
+						&:after {
+							content: none;
+						}
+		
+						> .text {
+							color: fade(@font-swatch6-color, 70%);
+							word-break: break-word;
+						
 							@media @tablet {
-								border-bottom: none;
+								padding: 0 20px;
+							}
+				
+							// Folder Arrow
+		
+							&:after {
+								content: '';
+								display: inline-block;
+								margin: 0 0 0.15em 0.75em;
+								border: 2px solid fade(@font-swatch6-color, 60%);
+								border-top: transparent;
+								border-left: transparent;
+								transform: rotate(45deg);
+								width: 0.5em;
+								height: 0.5em;
+							}
+						
+							&:hover:after {
+								border-color: @font-swatch6-color-hover;
+							}
+						}
+		
+						// Dropdown
+					
+						> ul,
+						&:hover > ul {
+							display: none;
+							position: absolute;
+							top: calc(~"100% + 1em");
+							right: 0;
+							z-index: 100;
+							opacity: 1;
+							background-color: @color-swatch3;
+							min-width: 300px;
+							max-width: 500px;
+		
+							@media @tablet {
+								display: none;
+								position: static;
+								max-width: none;
+								min-width: auto;
+								margin: 18px 0 0;
+								padding-bottom: 0;
+							}
+					
+							li {
+								display: block;
+								padding: 15px 20px;
+								
+								a {
+									padding: 0;
+									word-break: break-word;
+		
+									.text {
+										overflow: visible;
+										word-break: break-word;
+										color: fade(@font-swatch6-color, 70%);
+		
+										&:hover,
+										&:focus {
+											color: @font-swatch6-color;
+										}
+									}
+								}
+					
+								&:last-child {
+									@media @tablet {
+										border-bottom: none;
+									}
+								}
 							}
 						}
 					}
+			
+					// Folder Open
+			
+					&.folder-open ul,
+					&.folder-open:hover ul {
+						display: block;
+		
+						@media @tablet {
+							display: block;
+						}
+					}
 				}
 			}
-	
-			// Folder Open
-	
-			&.folder-open ul,
-			&.folder-open:hover ul {
-				display: block;
+		}
+	}
 
-				@media @tablet {
-					display: block;
-				}
-			}
+	.social {
+		padding: 20px 20px 20px 0;
+		text-align: right;
+		
+		@media @tablet {
+			padding: 20px 0;
+		}
+
+		.widget.socialicons .icons {
+			display: flex;
+			align-items: center;
 		}
 	}
 }
@@ -585,17 +652,12 @@ body {
 	.feature-bgimg {
 		&,
 		.content {
-			height: 600px;
-			min-height: 350px;
+			min-height: 600px;
 			vertical-align: bottom;
 		
 			@media @tablet {
 				vertical-align: middle;
 				background-color: fade(@color-swatch2, 80%);
-			}
-		
-			@media @tablet {
-				height: 350px;
 			}
 		
 			.spare {
@@ -710,12 +772,12 @@ pre, code {
 	padding: 0.5em 1em;
 	border: none;
 	.border-radius(0);
-	background-color: darken(@color-swatch1, 10%);
+    background-color: fade(@color-swatch3, 10%);
 	overflow: auto;
 	font-family: monospace;
 
 	.style--light & {
-		background-color: darken(@color-swatch1, 10%);
+		background-color: fade(@color-swatch3, 10%);
 	}
 
 	.style--accent & {
@@ -835,8 +897,7 @@ blockquote {
 
 table {
 	overflow: auto;
-	width: 100%;
-	max-width: 100%;
+	min-width: 100%;
 	border: none;
 	border-collapse: separate;
 	border-spacing: 0;
@@ -904,36 +965,40 @@ th {
 }
 
 td {
-	border-bottom: 1px dotted @font-swatch5-color;
 	padding: 1em 0.5em;
 	font-family: @font-swatch5-font-family;
 	font-weight: @font-swatch5-font-weight;
 	font-size: @font-swatch5-font-size;
 	line-height: @font-swatch5-line-height;
 	letter-spacing: @font-swatch5-letter-spacing;
+	border-bottom: 1px solid fade(@font-swatch5-color, 40%);
 
 	.style--light & {
-		border-bottom-color: @font-swatch5-color;
+		border-bottom-color: fade(@font-swatch5-color, 40%);
 	}
 
 	.style--accent & {
-		border-bottom-color: @contrast--accent;
+		border-bottom-color: fade(@contrast--accent, 40%);
 	}
 
 	.style--dark & {
-		border-bottom-color: @contrast--dark;
+		border-bottom-color: fade(@contrast--dark, 40%);
 	}
 	
 	@media @mobile {
 		display: block;
 		padding: 0 0.5em;
 		border-bottom: none;
+		width: 100% !important;
+		max-width: 100%;
 	}
 	
 	.responsivecolumns & {
 		display: block;
 		padding: 0 0.5em;
 		border-bottom: none;
+		width: 100% !important;
+		max-width: 100%;
 	}
 	
 	&:first-child {
@@ -949,35 +1014,35 @@ td {
 	&:last-child {
 		@media @mobile {
 			padding: 0 0.5em 1em;
-			border-bottom: 1px dotted @font-swatch5-color;
+			border-bottom: 1px solid fade(@font-swatch5-color, 40%);
 
 			.style--light & {
-				border-bottom-color: @font-swatch5-color;
+				border-bottom-color: fade(@font-swatch5-color, 40%);
 			}
 		
 			.style--accent & {
-				border-bottom-color: @contrast--accent;
+				border-bottom-color: fade(@contrast--accent, 40%);
 			}
 		
 			.style--dark & {
-				border-bottom-color: @contrast--dark;
+				border-bottom-color: fade(@contrast--dark, 40%);
 			}
 		}
 
 		.responsivecolumns & {
 			padding: 0 0.5em 1em;
-			border-bottom: 1px dotted @font-swatch5-color;
+			border-bottom: 1px solid fade(@font-swatch5-color, 40%);
 
 			.style--light & {
-				border-bottom-color: @font-swatch5-color;
+				border-bottom-color: fade(@font-swatch5-color, 40%);
 			}
 		
 			.style--accent & {
-				border-bottom-color: @contrast--accent;
+				border-bottom-color: fade(@contrast--accent, 40%);
 			}
 		
 			.style--dark & {
-				border-bottom-color: @contrast--dark;
+				border-bottom-color: fade(@contrast--dark, 40%);
 			}
 		}
 	}
