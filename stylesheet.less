@@ -7,7 +7,6 @@
 @mobile-smallest: ~"only screen and (max-width: 360px)";
 
 @import "@{templateLocal}/less/widgets.less";
-@import "@{templateLocal}/less/grid.less";
 @import "@{templateLocal}/less/blog.less";
 @import "@{templateLocal}/less/ecommerce.less";
 
@@ -43,27 +42,6 @@
 	-moz-transition:    @prop @time @ease;
 	-ms-transition:     @prop @time @ease;
 	-o-transition:      @prop @time @ease;  
-}
-
-// BASEKIT ELEMENTS
-
-.top-level-overlay button.top-level-overlay__delete-button,
-.row-overlay__delete-button,
-.top-level-overlay button.top-level-overlay__arrangement-button--up,
-.row-overlay__arrangement-button--up,
-.top-level-overlay button.top-level-overlay__arrangement-button--down,
-.row-overlay__arrangement-button--down, .row-overlay__edit-button {
-	background: transparent !important;
-}
-
-.row-overlay__edit-button {
-	background: #fff !important;
-}
-
-.is-dropdown-open .row-overlay__edit-button .row-overlay__edit-button-icon,
-.is-setting-open .row-overlay__edit-button .row-overlay__edit-button-icon {
-	left: auto !important;
-    top: auto !important;
 }
 
 // Main
@@ -733,6 +711,20 @@ h1, h2, h3, h4, h5, h6, a, p, ol, ul {
 	word-break: break-word;
 }
 
+h1, h2, h3, h4, h5 {
+	.style--light & {
+		color: @contrast--light;
+	}
+
+	.style--accent & {
+		color: @contrast--accent;
+	}
+
+	.style--dark & {
+		color: @contrast--dark;
+	}
+}
+
 h5 {
     font-size: @font-swatch5-font-size;
     color: @font-swatch4-color;
@@ -747,11 +739,25 @@ h5 {
 	line-height: @font-swatch5-line-height !important;
 
 	&, p, span, small, pre, code,
-	table, th, td {
+	table, th, td, li {
 		color: @font-swatch5-color;
 	
 		.style--light & {
-			color: @font-swatch5-color;
+			color: fade(@contrast--light, 90%);
+		}
+	
+		.style--accent & {
+			color: fade(@contrast--accent, 90%);
+		}
+	
+		.style--dark & {
+			color: fade(@contrast--dark, 90%);
+		}
+	}
+
+	a {
+		.style--light & {
+			color: @color--accent;
 		}
 	
 		.style--accent & {
@@ -761,6 +767,20 @@ h5 {
 		.style--dark & {
 			color: @contrast--dark;
 		}
+	}
+}
+
+.widget p {
+	.style--light & {
+		color: fade(@contrast--light, 90%);
+	}
+
+	.style--accent & {
+		color: fade(@contrast--accent, 90%);
+	}
+
+	.style--dark & {
+		color: fade(@contrast--dark, 90%);
 	}
 }
 
@@ -777,7 +797,7 @@ pre, code {
 	font-family: monospace;
 
 	.style--light & {
-		background-color: fade(@color-swatch3, 10%);
+		background-color: fade(@color--accent, 10%);
 	}
 
 	.style--accent & {
@@ -785,7 +805,7 @@ pre, code {
 	}
 
 	.style--dark & {
-		background-color: fade(@contrast--dark, 10%);
+		background-color: fade(@color--accent, 10%);
 	}
 }
 
@@ -793,15 +813,15 @@ code {
 	border-left: 1px solid @color-swatch5;
 
 	.style--light & {
-		border-color: @color-swatch5;
+		border-color: fade(@contrast--light, 90%);
 	}
 
 	.style--accent & {
-		border-color: @contrast--accent;
+		border-color: fade(@contrast--accent, 90%);
 	}
 
 	.style--dark & {
-		border-color: @contrast--dark;
+		border-color: fade(@contrast--dark, 90%);
 	}
 }
 
@@ -818,21 +838,21 @@ blockquote {
 	word-break: break-word;
 
 	.style--light & {
-		background-color: fade(@color-swatch3, 10%);
-		border-color: @color-swatch2;
-		color: @font-swatch5-color;
+		background-color: fade(@color--accent, 10%);
+		border-color: @contrast--light;
+		color: fade(@contrast--light, 90%);
 	}
 
 	.style--accent & {
 		background-color: fade(@contrast--accent, 10%);
 		border-color: @contrast--accent;
-		color: @contrast--accent;
+		color: fade(@contrast--accent, 90%);
 	}
 
 	.style--dark & {
 		background-color: fade(@color--accent, 10%);
 		border-color: @color--accent;
-		color: @contrast--dark;
+		color: fade(@contrast--dark, 90%);
 	}
 
     &:before {
@@ -907,18 +927,18 @@ table {
 	color: @font-swatch5-color;
 
 	.style--light & {
-		border-top-color: @font-swatch5-color;
-		color: @font-swatch5-color;
+		border-color: fade(@contrast--light, 90%);
+		color: fade(@contrast--light, 90%);
 	}
 
 	.style--accent & {
-		border-top-color: @contrast--accent;
-		color: @contrast--accent;
+		border-color: fade(@contrast--accent, 90%);
+		color: fade(@contrast--accent, 90%);
 	}
 
 	.style--dark & {
-		border-top-color: @contrast--dark;
-		color: @contrast--dark;
+		border-color: fade(@contrast--dark, 90%);
+		color: fade(@contrast--dark, 90%);
 	}
 }
 
@@ -941,17 +961,17 @@ th {
 	color: @font-swatch4-color;
 
 	.style--light & {
-		border-bottom-color: @font-swatch5-color;
-		color: @font-swatch4-color;
+		border-bottom-color: fade(@contrast--light, 90%);
+		color: @contrast--light;
 	}
 
 	.style--accent & {
-		border-bottom-color: @contrast--accent;
+		border-bottom-color: fade(@contrast--accent, 90%);
 		color: @contrast--accent;
 	}
 
 	.style--dark & {
-		border-bottom-color: @contrast--dark;
+		border-bottom-color: fade(@contrast--dark, 90%);
 		color: @contrast--dark;
 	}
 	
@@ -974,7 +994,7 @@ td {
 	border-bottom: 1px solid fade(@font-swatch5-color, 40%);
 
 	.style--light & {
-		border-bottom-color: fade(@font-swatch5-color, 40%);
+		border-bottom-color: fade(@contrast--light, 40%);
 	}
 
 	.style--accent & {
@@ -1017,7 +1037,7 @@ td {
 			border-bottom: 1px solid fade(@font-swatch5-color, 40%);
 
 			.style--light & {
-				border-bottom-color: fade(@font-swatch5-color, 40%);
+				border-bottom-color: fade(@contrast--light, 40%);
 			}
 		
 			.style--accent & {
@@ -1034,7 +1054,7 @@ td {
 			border-bottom: 1px solid fade(@font-swatch5-color, 40%);
 
 			.style--light & {
-				border-bottom-color: fade(@font-swatch5-color, 40%);
+				border-bottom-color: fade(@contrast--light, 40%);
 			}
 		
 			.style--accent & {
@@ -1052,15 +1072,15 @@ tr:last-child td {
 	border-bottom: 1px solid @font-swatch5-color;
 
 	.style--light & {
-		border-bottom-color: @font-swatch5-color;
+		border-bottom-color: fade(@contrast--light, 90%);
 	}
 
 	.style--accent & {
-		border-bottom-color: @contrast--accent;
+		border-bottom-color: fade(@contrast--accent, 90%);
 	}
 
 	.style--dark & {
-		border-bottom-color: @contrast--dark;
+		border-bottom-color: fade(@contrast--dark, 90%);
 	}
 	
 	@media @mobile {
@@ -1076,15 +1096,15 @@ tr:last-child td {
 			border-bottom: 1px solid @font-swatch5-color;
 
 			.style--light & {
-				border-bottom-color: @font-swatch5-color;
+				border-bottom-color: fade(@contrast--light, 90%);
 			}
-		
+
 			.style--accent & {
-				border-bottom-color: @contrast--accent;
+				border-bottom-color: fade(@contrast--accent, 90%);
 			}
-		
+
 			.style--dark & {
-				border-bottom-color: @contrast--dark;
+				border-bottom-color: fade(@contrast--dark, 90%);
 			}
 		}
 
@@ -1092,15 +1112,15 @@ tr:last-child td {
 			border-bottom: 1px solid @font-swatch5-color;
 
 			.style--light & {
-				border-bottom-color: @font-swatch5-color;
+				border-bottom-color: fade(@contrast--light, 90%);
 			}
-		
+
 			.style--accent & {
-				border-bottom-color: @contrast--accent;
+				border-bottom-color: fade(@contrast--accent, 90%);
 			}
-		
+
 			.style--dark & {
-				border-bottom-color: @contrast--dark;
+				border-bottom-color: fade(@contrast--dark, 90%);
 			}
 		}
 	}
