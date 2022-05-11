@@ -15,6 +15,7 @@
 		"images/gallery/7.jpg",
 		"images/gallery/8.jpg"
 	],
+    "versionTenCompatible": 1,
     "pageTypes":["home"],
     "colorSwatches":
     {
@@ -24,7 +25,7 @@
             "color3":"#125b76",
             "color4":"#454a4f",
             "color5":"#6c7376",
-            "color6":"#000000",
+            "color6":"#152831",
             "color7":"#ffffff"
         },
         "Swatch 2": {

@@ -1,8 +1,8 @@
 // BUTTONS
 
-.btn,
-button.btn,
-button.button,
+.widget .btn,
+.widget button.btn,
+.widget button.button,
 .contactform button,
 .contactform button.btn,
 .advancedcontactform button,
@@ -24,7 +24,8 @@ button.button,
 .userregistration fieldset .userregistrationbtn,
 .widget.yelpreview .review-body .review-link a,
 form.blog-search-form .form-group button,
-.blog-post-more-link a {
+.blog-post-more-link a,
+.contentgroup__link {
 	outline: none;
 	background-color: @font-swatch7-background-color;
 	color: @font-swatch7-color;
@@ -47,10 +48,40 @@ form.blog-search-form .form-group button,
 	min-width: 100px;
 	height: auto !important;
 
+	.style--light & {
+		background-color: @color--accent;
+		color: @contrast--accent;
+	}
+
+	.style--accent & {
+		background-color: @color--dark;
+		color: @contrast--dark;
+	}
+
+	.style--dark & {
+		background-color: @color--accent;
+		color: @contrast--accent;
+	}
+
 	&:hover {
 		text-decoration: none;
 		background-color: @font-swatch7-background-color-hover;
 		.transition(all, 0.3s, ease);
+
+		.style--light & {
+			background-color: @color--dark;
+			color: @contrast--dark;
+		}
+
+		.style--accent & {
+			background-color: @color--light;
+			color: @contrast--light;
+		}
+
+		.style--dark & {
+			background-color: @color--light;
+			color: @contrast--light;
+		}
 	}
 
 	@media @mobile {
@@ -65,12 +96,36 @@ form.blog-search-form .form-group button,
 
 
 .widget.ecomcheckout .checkout-order-button:disabled,
-button:disabled {
+.widget button.btn:disabled {
 	background-color: fadeout(@font-swatch7-background-color, 50%);
 	cursor: not-allowed;
+
+	.style--light & {
+		background-color: faeout(@color--accent, 50%);
+	}
+
+	.style--accent & {
+		background-color: faeout(@color--dark, 50%);
+	}
+
+	.style--dark & {
+		background-color: faeout(@color--accent, 50%);
+	}
 	
 	&:hover {
 		background-color: fadeout(@font-swatch7-background-color, 50%);
+
+		.style--light & {
+			background-color: faeout(@color--accent, 50%);
+		}
+
+		.style--accent & {
+			background-color: faeout(@color--dark, 50%);
+		}
+
+		.style--dark & {
+			background-color: faeout(@color--accent, 50%);
+		}
 	}
 }
 
@@ -78,7 +133,7 @@ button:disabled {
 	color: @font-swatch7-color;
 
 	.style--light & {
-		color: @font-swatch7-color;
+		color: @contrast--accent;
 	}
 
 	.style--accent & {
@@ -87,7 +142,7 @@ button:disabled {
 
 	.style--dark & {
 		color: @contrast--accent;
-	} 
+	}
 }
 
 // Image Buttons
@@ -159,43 +214,43 @@ button:disabled {
 			.border-radius(50%);
 			text-indent: 0;
 			font-size: 0;
+
+			.style--light & {
+				background-color: @color--light;
+				border-color: @color--accent;
+				color: @color--accent;
+			}
+
+			.style--accent & {
+				background-color: @color--accent;
+				border-color: @color--light;
+				color: @color--light;
+			}
+
+			.style--dark & {
+				background-color: @color--dark;
+				border-color: @color--accent;
+				color: @color--accent;
+			}
 		
 			@media @mobile {
 				width: 36px;
 				height: 36px;
 			}
 
-			.style--light & {
-				background-color: fade(@color-swatch1, 80%);
-				border-color: @color-swatch3;
-				color: @color-swatch3;
-			}
-		
-			.style--accent & {
-				background-color: fade(@contrast--accent, 80%);
-				border-color: @color--dark;
-				color: @color--dark;
-			}
-		
-			.style--dark & {
-				background-color: fade(@contrast--dark, 80%);
-				border-color: @color--accent;
-				color: @color--accent;
-			}
-
 			&:hover {
 				background-color: @color-swatch1;
 
 				.style--light & {
-					background-color: @color-swatch1;
+					background-color: @color--light;
 				}
 			
 				.style--accent & {
-					background-color: @contrast--accent;
+					background-color: @color--accent;
 				}
 			
 				.style--dark & {
-					background-color: @contrast--dark;
+					background-color: @color--dark;
 				}
 			}
 
@@ -241,6 +296,18 @@ label, .label,
 	margin-top: 1em;
     margin-bottom: 0;
     word-break: break-word;
+
+    .style--light & {
+		color: fade(@contrast--light, 90%);
+	}
+
+	.style--accent & {
+		color: fade(@contrast--accent, 90%);
+	}
+
+	.style--dark & {
+		color: fade(@contrast--dark, 90%);
+	}
 }
 
 input,
@@ -255,6 +322,17 @@ input:-webkit-autofill:focus {
 	background-color: fade(@color-swatch2, 10%);
 	padding: 0 12px;
 	height: 40px;
+
+	.style--light & {
+		background-color: darken(@color--light, 10%);
+		color: @contrast--light;
+	}
+
+	.style--accent &,
+	.style--dark & {
+		background-color: @color--light;
+		color: @contrast--light;
+	}
 }
 
 textarea {
@@ -262,6 +340,17 @@ textarea {
 	border: 0;
 	min-height: 100px;
 	padding: 8px 12px;
+
+	.style--light & {
+		background-color: darken(@color--light, 10%);
+		color: @contrast--light;
+	}
+
+	.style--accent &,
+	.style--dark & {
+		background-color: @color--light;
+		color: @contrast--light;
+	}
 }
 
 // Dropdown
@@ -298,6 +387,13 @@ form select {
 	option {
 		background-color: @color-swatch1;
 		color: @font-swatch5-color;
+
+		.style--light &,
+		.style--accent &,
+		.style--dark & {
+			background-color: @color--light;
+			color: fade(@contrast--light, 90%);
+		}
 	}
 }
 
@@ -394,6 +490,15 @@ form select {
 		font-size: bkscale(@font-swatch5-font-size, 0.95);
 		margin: 0;
 		text-indent: 6px;
+
+		.style--light & {
+			background-color: darken(@color--light, 10%);
+		}
+
+		.style--accent &,
+		.style--dark & {
+			background-color: @color--light;
+		}
 	}
 }
 
@@ -492,15 +597,10 @@ form select {
 			border: 1px solid @font-swatch7-background-color;
 			border-radius: 0;
 
-			.style--light & {
-				border-color: @font-swatch7-background-color;
-			}
-
-			.style--accent & {
-				border-color: @color--dark;
-			}
-
+			.style--light &,
+			.style--accent &,
 			.style--dark & {
+				background-color: @color--light;
 				border-color: @color--accent;
 			}
 		}
@@ -523,19 +623,15 @@ form select {
 			height: floor(@font-swatch5-line-height*0.8);
 			transform: scale(50%);
 
-			.style--light & {
-				background-color: @font-swatch7-background-color;
-				border: 1px solid @font-swatch7-background-color;
+			.style--light &,
+			.style--dark & {
+				background-color: @color--accent;
+				border: 1px solid @color--accent;
 			}
 
 			.style--accent & {
 				background-color: @color--dark;
 				border: 1px solid @color--dark;
-			}
-
-			.style--dark & {
-				background-color: @color--accent;
-				border: 1px solid @color--accent;
 			}
 		}
 	}
@@ -549,16 +645,13 @@ form select {
 			box-shadow: -6px -6px 0 0 inset @font-swatch7-background-color;
 			transform: scale(50%) rotate(45deg);
 
-			.style--light & {
-				box-shadow: -6px -6px 0 0 inset @font-swatch7-background-color;
+			.style--light &,
+			.style--dark & {
+				box-shadow: -6px -6px 0 0 inset @color--accent;
 			}
 
 			.style--accent & {
 				box-shadow: -6px -6px 0 0 inset @color--dark;
-			}
-
-			.style--dark & {
-				box-shadow: -6px -6px 0 0 inset @color--accent;
 			}
 		}
 	}
@@ -566,12 +659,24 @@ form select {
 	label[for*="input--terms"] span a.form__link {
 		text-decoration: underline;
 		border: none;
+
+		.style--light & {
+			color: fade(@contrast--light, 90%);
+		}
+
+		.style--accent & {
+			color: fade(@contrast--accent, 90%);
+		}
+
+		.style--dark & {
+			color: fade(@contrast--dark, 90%);
+		}
 	}
 }
 
 // General Widgets
 
-div[role="main"] .widget {
+div[role="main"] .widget:not(.row) {
 	margin-bottom: 10px;
 }
 
@@ -590,15 +695,15 @@ div[role="main"] .widget {
 		color: @font-swatch5-color;
 	
 		.style--light & {
-			color: @font-swatch5-color;
+			color: fade(@contrast--light, 90%);
 		}
-		
+
 		.style--accent & {
-			color: @contrast--accent;
+			color: fade(@contrast--accent, 90%);
 		}
-	
+
 		.style--dark & {
-			color: @contrast--dark;
+			color: fade(@contrast--dark, 90%);
 		}
 	}
 
@@ -854,15 +959,15 @@ div[role="main"] .widget {
 			border: 1px solid @color-swatch2;
 
             .style--light & {
-                border-color: @color-swatch2;
+                border-color: @contrast--light;
             }
         
             .style--accent & {
-                border-color: @contrast--dark;
+                border-color: @contrast--accent;
             }
         
             .style--dark & {
-                border-color: @color--accent;
+                border-color: @contrast--dark;
             }
 
 			&.selected {
@@ -870,18 +975,18 @@ div[role="main"] .widget {
 				border: 1px solid @color-swatch2;
 
                 .style--light & {
-                    background-color: @color-swatch2;
-					border: 1px solid @color-swatch2;
+                    background-color: @contrast--light;
+					border-color: @contrast--light;
                 }
             
                 .style--accent & {
-                    background-color: @contrast--dark;
-					border: 1px solid @contrast--dark;
+                    background-color: @contrast--accent;
+					border-color: @contrast--accent;
                 }
             
                 .style--dark & {
-                    background-color: @color--accent;
-					border: 1px solid @color--accent;
+                    background-color: @contrast--dark;
+					border-color: @contrast--dark;
                 }
 			} 
 
@@ -889,6 +994,21 @@ div[role="main"] .widget {
 				background-color: @color-swatch2;
 				border: 1px solid @color-swatch2;
 				cursor: pointer;
+
+				.style--light & {
+                    background-color: @contrast--light;
+					border: 1px solid @contrast--light;
+                }
+            
+                .style--accent & {
+                    background-color: @contrast--accent;
+					border-color: @contrast--accent;
+                }
+            
+                .style--dark & {
+                    background-color: @contrast--dark;
+					border-color: @contrast--dark;
+                }
 			}
 		}
 	}
@@ -946,18 +1066,18 @@ div[role="main"] .widget {
 	
 			span.bk-full-name {
 				font-family: @font-swatch4-font-family;
-                color: @color-swatch6;
+                color: @color-swatch4;
     
                 .style--light & {
-                    color: @color-swatch6;
+                    color: @contrast--light;
                 }
             
                 .style--accent & {
-                    color: @color--dark;
+                    color: @contrast--accent;
                 }
             
                 .style--dark & {
-                    color: @color--accent;
+                    color: @contrast--dark;
                 }
 			}
 		}
@@ -970,6 +1090,18 @@ div[role="main"] .widget {
 			font-family: @font-swatch5-font-family;
 			font-size: @font-swatch5-font-size;
 			color: @font-swatch5-color;
+
+			.style--light & {
+				color: fade(@contrast--light, 90%);
+			}
+
+			.style--accent & {
+				color: fade(@contrast--accent, 90%);
+			}
+
+			.style--dark & {
+				color: fade(@contrast--dark, 90%);
+			}
 	
 			a,
 			span a,
@@ -985,24 +1117,36 @@ div[role="main"] .widget {
 		
 			p {
 				font-size: @font-swatch5-font-size;
+
+				.style--light & {
+					color: fade(@contrast--light, 90%);
+				}
+
+				.style--accent & {
+					color: fade(@contrast--accent, 90%);
+				}
+
+				.style--dark & {
+					color: fade(@contrast--dark, 90%);
+				}
 			}
 		
 			a {
 				font-family: @font-swatch5-font-family;
 				text-decoration: none;
-                color: @color-swatch6;
+                color: @color-swatch4;
 
                 .style--light & {
-                    color: @color-swatch6;
-                }
-                
-                .style--accent & {
-                    color: @color--dark;
-                }
-            
-                .style--dark & {
-                    color: @color--accent;
-                }
+					color: @contrast--light;
+				}
+
+				.style--accent & {
+					color: @contrast--accent;
+				}
+
+				.style--dark & {
+					color: @contrast--dark;
+				}
 			}
 
             .twitter-content {
@@ -1032,31 +1176,31 @@ div[role="main"] .widget {
 					color: @font-swatch5-color;
 				
 					.style--light & {
-						color: @font-swatch5-color;
+						color: fade(@contrast--light, 90%);
 					}
-					
+
 					.style--accent & {
-						color: @contrast--accent;
+						color: fade(@contrast--accent, 90%);
 					}
-				
+
 					.style--dark & {
-						color: @contrast--dark;
+						color: fade(@contrast--dark, 90%);
 					}
                 }
                 
                 time + span + span a {
-					color: @color-swatch6;
+					color: @color-swatch4;
 	
 					.style--light & {
-						color: @color-swatch6;
+						color: @contrast--light;
 					}
-					
+
 					.style--accent & {
-						color: @color--dark;
+						color: @contrast--accent;
 					}
-				
+
 					.style--dark & {
-						color: @color--accent;
+						color: @contrast--dark;
 					}
                 }
             }
@@ -1154,6 +1298,18 @@ div[role="main"] .widget {
 
 hr.line {
 	background-color: lighten(@color-swatch5, 35%);
+
+	.style--light & {
+		background-color: lighten(@contrast--light, 35%);
+	}
+
+	.style--accent & {
+		background-color: lighten(@contrast--accent, 35%);
+	}
+
+	.style--dark & {
+		background-color: lighten(@contrast--dark, 35%);
+	}
 }
 
 // FACEBOOK COMMENTS

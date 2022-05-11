@@ -102,6 +102,18 @@
                     font-weight: normal;
                     text-align: left;
                     width: 100%;
+
+                    .style--light & {
+                        color: fade(@contrast--light, 90%);
+                    }
+
+                    .style--accent & {
+                        color: fade(@contrast--accent, 90%);
+                    }
+
+                    .style--dark & {
+                        color: fade(@contrast--dark, 90%);
+                    }
                 }
 
                 select {
@@ -140,6 +152,18 @@
     line-height: @font-swatch4-line-height;
     letter-spacing: @font-swatch4-letter-spacing;
     color: @color-swatch5;
+
+    .style--light & {
+        color: fade(@contrast--light, 90%);
+    }
+
+    .style--accent & {
+        color: fade(@contrast--accent, 90%);
+    }
+
+    .style--dark & {
+        color: fade(@contrast--dark, 90%);
+    }
 
     @media @tablet {
         margin-bottom: 0;
@@ -182,6 +206,18 @@
         .ecom-featuredproducts-title,
         .ecom-featuredproducts-price {
             color: darken(@color-swatch4, 20%);
+
+            .style--light & {
+                color: @contrast--light;
+            }
+
+            .style--accent & {
+                color: @contrast--accent;
+            }
+
+            .style--dark & {
+                color: @contrast--dark;
+            }
 
             &:hover {
                 text-decoration: none;
@@ -226,6 +262,18 @@
 .widget.ecomfeaturedproducts .ecom-featuredproducts-price {
     font-family: bkscale(@font-swatch2-font-family, 0.95);
     color: @color-swatch3;
+
+    .style--light & {
+        color: @color--accent;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @color--accent;
+    }
 }
 
 // Pagination
@@ -235,6 +283,18 @@
     border-top: 1px solid darken(@color-swatch1,7%);
     padding-top: 1em;
     margin-top: 3em;
+
+    .style--light & {
+        border-color: darken(@color--light, 10%);
+    }
+
+    .style--accent & {
+        border-color: darken(@color--accent, 10%);
+    }
+
+    .style--dark & {
+        border-color: darken(@color--dark, 10%);
+    }
 }
 
 // Select Boxes
@@ -272,6 +332,18 @@
             color: @font-swatch4-color;
             font-size: @font-swatch4-font-size;
             padding-bottom: 20px;
+
+            .style--light & {
+                color: fade(@color--accent, 10%);
+            }
+
+            .style--accent & {
+                color: fade(@contrast--accent, 10%);
+            }
+
+            .style--dark & {
+                color: fade(@color--accent, 10%);
+            }
         }
     
         .ecom-product-variation {
@@ -284,6 +356,18 @@
             a {
                 color: @font-swatch7-background-color;
                 background-color: transparent;
+
+                .style--light & {
+                    background-color: fade(@color--accent, 10%);
+                }
+
+                .style--accent & {
+                    background-color: fade(@contrast--accent, 10%);
+                }
+
+                .style--dark & {
+                    background-color: fade(@color--accent, 10%);
+                }
             }
         }
     
@@ -414,6 +498,18 @@
             padding: 20px 0;
             margin: 20px 0 30px;
             border-top: 1px solid darken(@color-swatch1,10%);
+
+            .style--light & {
+                border-color: darken(@color--light, 10%);
+            }
+
+            .style--accent & {
+                border-color: darken(@color--accent, 10%);
+            }
+
+            .style--dark & {
+                border-color: darken(@color--dark, 10%);
+            }
         }
     }
 
