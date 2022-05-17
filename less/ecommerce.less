@@ -94,7 +94,7 @@
 
                 label {
                     display: block;
-                    padding-bottom: 0.4em;
+                    margin-top: 0;
                     font-family: @font-swatch2-font-family;
                     font-size: 14px;
                     color: @color-swatch4;
@@ -104,7 +104,7 @@
                     width: 100%;
 
                     .style--light & {
-                        color: fade(@contrast--light, 90%);
+                        color: @color-swatch4;
                     }
 
                     .style--accent & {
@@ -151,18 +151,18 @@
     font-weight: @font-swatch4-font-weight;
     line-height: @font-swatch4-line-height;
     letter-spacing: @font-swatch4-letter-spacing;
-    color: @color-swatch5;
+    color: @font-swatch5-color;
 
     .style--light & {
-        color: fade(@contrast--light, 90%);
+        color: @font-swatch5-color;
     }
 
     .style--accent & {
-        color: fade(@contrast--accent, 90%);
+        color: @contrast--accent;
     }
 
     .style--dark & {
-        color: fade(@contrast--dark, 90%);
+        color: @contrast--dark;
     }
 
     @media @tablet {
@@ -184,7 +184,7 @@
     padding: 10px;
     overflow: auto;
 
-	a:hover {
+	a, a:hover {
 		text-decoration: none;
 	}
     
@@ -205,16 +205,16 @@
         .ecom-productlist-price,
         .ecom-featuredproducts-title,
         .ecom-featuredproducts-price {
-            color: darken(@color-swatch4, 20%);
-
+            color: @font-swatch5-color;
+        
             .style--light & {
-                color: @contrast--light;
+                color: @font-swatch5-color;
             }
-
+        
             .style--accent & {
                 color: @contrast--accent;
             }
-
+        
             .style--dark & {
                 color: @contrast--dark;
             }
@@ -264,7 +264,7 @@
     color: @color-swatch3;
 
     .style--light & {
-        color: @color--accent;
+        color: @color-swatch3;
     }
 
     .style--accent & {
@@ -280,12 +280,12 @@
 
 .widget.ecomproductslist .productlist-pagination {
     margin-left: 3%;
-    border-top: 1px solid darken(@color-swatch1,7%);
+    border-top: 1px solid darken(@color-swatch1, 7%);
     padding-top: 1em;
     margin-top: 3em;
 
     .style--light & {
-        border-color: darken(@color--light, 10%);
+        border-color: darken(@color-swatch1, 7%);
     }
 
     .style--accent & {
@@ -305,7 +305,6 @@
     select {
         width: auto;
         height: 40px;
-        margin-top: 5px;
         background-color: fade(@color-swatch2, 10%);
 	    border: 0;
         color: @color-swatch5;
@@ -334,7 +333,7 @@
             padding-bottom: 20px;
 
             .style--light & {
-                color: fade(@color--accent, 10%);
+                color: @font-swatch4-color;
             }
 
             .style--accent & {
@@ -351,25 +350,6 @@
         }
     
         // Buttons
-        
-        .ecom-product-go-to-checkout-btn-wrapper {
-            a {
-                color: @font-swatch7-background-color;
-                background-color: transparent;
-
-                .style--light & {
-                    background-color: fade(@color--accent, 10%);
-                }
-
-                .style--accent & {
-                    background-color: fade(@contrast--accent, 10%);
-                }
-
-                .style--dark & {
-                    background-color: fade(@color--accent, 10%);
-                }
-            }
-        }
     
         .btn.ecom-product-add-to-cart-btn {
             .text:before {
@@ -446,10 +426,6 @@
         .ecom-product-info .ecom-product-variation select {
             width: 100%;
         }
-    
-        .ecom-product-preview-image-wrap {
-            text-align: left;
-        }
         
         .ecom-product-cattag {
             .ecom-product-tag,
@@ -497,10 +473,10 @@
         .ecom-product-long-description {
             padding: 20px 0;
             margin: 20px 0 30px;
-            border-top: 1px solid darken(@color-swatch1,10%);
+            border-top: 1px solid darken(@font-swatch5-color, 10%);
 
             .style--light & {
-                border-color: darken(@color--light, 10%);
+                border-color: darken(@font-swatch5-color, 10%);
             }
 
             .style--accent & {
@@ -711,7 +687,6 @@
 
         img {
             max-height: 150px;
-            max-width: 100% !important;
         }
     }
 
@@ -814,7 +789,6 @@
     // Table
 
     table {
-
         // Item Row
 
         tr.basket-summary-items:hover {
@@ -822,7 +796,7 @@
         }
 
         tr td {
-            border-bottom: 1px solid darken(@color-swatch1,10%);
+            border-bottom: 1px solid darken(@color-swatch1, 10%);
 
             @media @mobile {
                 border-bottom: 0;
@@ -867,10 +841,9 @@
 
             &:last-child {
                 @media @mobile {
-                    padding: 6px 20px;
                     margin: 20px 0 0;
-                    border-bottom: 1px solid darken(@color-swatch1,10%);
-                    border-top: 1px solid darken(@color-swatch1,10%);
+                    padding: 6px 20px 20px;
+                    border-bottom: 1px solid darken(@color-swatch1, 10%);
                 }
             }
         }
@@ -883,6 +856,9 @@
             &:last-child {
                 @media @mobile {
                     display: block;
+                    margin-top: 0px;
+                    padding-top: 30px;
+                    padding-bottom: 30px;
                 }
             }
         }

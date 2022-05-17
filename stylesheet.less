@@ -493,11 +493,15 @@ body {
 					}
 			
 					a {
-						color: fade(@font-swatch6-color, 70%);
+						color: fade(@font-swatch6-color, 90%);
 						word-break: break-word;
 						
 						@media @tablet {
 							padding: 0 20px;
+						}
+
+						&:hover {
+							color: @font-swatch6-color;
 						}
 					}
 		
@@ -516,11 +520,15 @@ body {
 						}
 		
 						> .text {
-							color: fade(@font-swatch6-color, 70%);
+							color: fade(@font-swatch6-color, 90%);
 							word-break: break-word;
 						
 							@media @tablet {
 								padding: 0 20px;
+							}
+
+							&:hover {
+								color: @font-swatch6-color;
 							}
 				
 							// Folder Arrow
@@ -529,7 +537,7 @@ body {
 								content: '';
 								display: inline-block;
 								margin: 0 0 0.15em 0.75em;
-								border: 2px solid fade(@font-swatch6-color, 60%);
+								border: 2px solid fade(@font-swatch6-color, 80%);
 								border-top: transparent;
 								border-left: transparent;
 								transform: rotate(45deg);
@@ -712,8 +720,10 @@ h1, h2, h3, h4, h5, h6, a, p, ol, ul {
 }
 
 h1, h2, h3, h4, h5 {
+	color: @font-swatch5-color;
+
 	.style--light & {
-		color: @contrast--light;
+		color: @font-swatch5-color;
 	}
 
 	.style--accent & {
@@ -743,21 +753,24 @@ h5 {
 		color: @font-swatch5-color;
 	
 		.style--light & {
-			color: fade(@contrast--light, 90%);
+			color: @font-swatch5-color;
 		}
 	
 		.style--accent & {
-			color: fade(@contrast--accent, 90%);
+			color: @contrast--accent;
 		}
 	
 		.style--dark & {
-			color: fade(@contrast--dark, 90%);
+			color: @contrast--dark;
 		}
 	}
 
 	a {
+		color: @color-swatch3;
+		text-decoration: underline;
+
 		.style--light & {
-			color: @color--accent;
+			color: @color-swatch3;
 		}
 	
 		.style--accent & {
@@ -770,17 +783,20 @@ h5 {
 	}
 }
 
-.widget p {
+.widget p,
+dd, dt {
+	color: @font-swatch5-color;
+
 	.style--light & {
-		color: fade(@contrast--light, 90%);
+		color: @font-swatch5-color;
 	}
 
 	.style--accent & {
-		color: fade(@contrast--accent, 90%);
+		color: @contrast--accent;
 	}
 
 	.style--dark & {
-		color: fade(@contrast--dark, 90%);
+		color: @contrast--dark;
 	}
 }
 
@@ -797,7 +813,7 @@ pre, code {
 	font-family: monospace;
 
 	.style--light & {
-		background-color: fade(@color--accent, 10%);
+    	background-color: fade(@color-swatch3, 10%);
 	}
 
 	.style--accent & {
@@ -813,15 +829,15 @@ code {
 	border-left: 1px solid @color-swatch5;
 
 	.style--light & {
-		border-color: fade(@contrast--light, 90%);
+		border-color: @color-swatch5;
 	}
 
 	.style--accent & {
-		border-color: fade(@contrast--accent, 90%);
+		border-color: @contrast--accent;
 	}
 
 	.style--dark & {
-		border-color: fade(@contrast--dark, 90%);
+		border-color: @contrast--dark;
 	}
 }
 
@@ -838,26 +854,27 @@ blockquote {
 	word-break: break-word;
 
 	.style--light & {
-		background-color: fade(@color--accent, 10%);
-		border-color: @contrast--light;
-		color: fade(@contrast--light, 90%);
+		background-color: fade(@color-swatch3, 10%);
+		border-color: @color-swatch2;
+		color: @font-swatch5-color;
 	}
 
 	.style--accent & {
 		background-color: fade(@contrast--accent, 10%);
 		border-color: @contrast--accent;
-		color: fade(@contrast--accent, 90%);
+		color: @contrast--accent;
 	}
 
 	.style--dark & {
 		background-color: fade(@color--accent, 10%);
 		border-color: @color--accent;
-		color: fade(@contrast--dark, 90%);
+		color: @contrast--dark;
 	}
 
-    &:before {
-        display: none;
-    }
+    &:before,
+	&:after {
+		display: none;
+	}
 }
 
 // Unordered and Ordered List
@@ -918,6 +935,7 @@ blockquote {
 table {
 	overflow: auto;
 	min-width: 100%;
+	max-width: 100%;
 	border: none;
 	border-collapse: separate;
 	border-spacing: 0;
@@ -927,18 +945,18 @@ table {
 	color: @font-swatch5-color;
 
 	.style--light & {
-		border-color: fade(@contrast--light, 90%);
-		color: fade(@contrast--light, 90%);
+		border-color: @font-swatch5-color;
+		color: @font-swatch5-color;
 	}
 
 	.style--accent & {
-		border-color: fade(@contrast--accent, 90%);
-		color: fade(@contrast--accent, 90%);
+		border-color: @contrast--accent;
+		color: @contrast--accent;
 	}
 
 	.style--dark & {
-		border-color: fade(@contrast--dark, 90%);
-		color: fade(@contrast--dark, 90%);
+		border-color: @contrast--dark;
+		color: @contrast--dark;
 	}
 }
 
@@ -961,17 +979,17 @@ th {
 	color: @font-swatch4-color;
 
 	.style--light & {
-		border-bottom-color: fade(@contrast--light, 90%);
-		color: @contrast--light;
+		border-bottom-color: @font-swatch5-color;
+		color: @font-swatch4-color;
 	}
 
 	.style--accent & {
-		border-bottom-color: fade(@contrast--accent, 90%);
+		border-bottom-color: @contrast--accent;
 		color: @contrast--accent;
 	}
 
 	.style--dark & {
-		border-bottom-color: fade(@contrast--dark, 90%);
+		border-bottom-color: @contrast--dark;
 		color: @contrast--dark;
 	}
 	
@@ -994,7 +1012,7 @@ td {
 	border-bottom: 1px solid fade(@font-swatch5-color, 40%);
 
 	.style--light & {
-		border-bottom-color: fade(@contrast--light, 40%);
+		border-bottom-color: fade(@font-swatch5-color, 40%);
 	}
 
 	.style--accent & {
@@ -1037,7 +1055,7 @@ td {
 			border-bottom: 1px solid fade(@font-swatch5-color, 40%);
 
 			.style--light & {
-				border-bottom-color: fade(@contrast--light, 40%);
+				border-bottom-color: fade(@font-swatch5-color, 40%);
 			}
 		
 			.style--accent & {
@@ -1054,7 +1072,7 @@ td {
 			border-bottom: 1px solid fade(@font-swatch5-color, 40%);
 
 			.style--light & {
-				border-bottom-color: fade(@contrast--light, 40%);
+				border-bottom-color: fade(@font-swatch5-color, 40%);
 			}
 		
 			.style--accent & {
@@ -1072,7 +1090,7 @@ tr:last-child td {
 	border-bottom: 1px solid @font-swatch5-color;
 
 	.style--light & {
-		border-bottom-color: fade(@contrast--light, 90%);
+		border-bottom-color: fade(@font-swatch5-color, 90%);
 	}
 
 	.style--accent & {
@@ -1096,7 +1114,7 @@ tr:last-child td {
 			border-bottom: 1px solid @font-swatch5-color;
 
 			.style--light & {
-				border-bottom-color: fade(@contrast--light, 90%);
+				border-bottom-color: fade(@font-swatch5-color, 90%);
 			}
 
 			.style--accent & {
@@ -1112,7 +1130,7 @@ tr:last-child td {
 			border-bottom: 1px solid @font-swatch5-color;
 
 			.style--light & {
-				border-bottom-color: fade(@contrast--light, 90%);
+				border-bottom-color: fade(@font-swatch5-color, 90%);
 			}
 
 			.style--accent & {
