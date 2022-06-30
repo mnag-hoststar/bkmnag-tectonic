@@ -26,7 +26,8 @@
 .widget.yelpreview .review-body .review-link a,
 form.blog-search-form .form-group button,
 .blog-post-more-link a,
-.contentgroup__link {
+.contentgroup__link,
+.productlist-clear-search {
 	outline: none;
 	background-color: @font-swatch7-background-color;
 	color: @font-swatch7-color;
@@ -96,7 +97,6 @@ form.blog-search-form .form-group button,
 .ecombasket-summary-link {
 	display: inline-block;
 }
-
 
 .widget.ecomcheckout .checkout-order-button:disabled,
 .widget button.btn:disabled {
@@ -192,6 +192,14 @@ form.blog-search-form .form-group button,
 	span.file-name {
 		display: block;
 		margin: 0.5em 0;
+	}
+}
+
+.productlist-clear-search {
+	margin: 10px 10px 60px;
+
+	@media @mobile {
+		width: calc(~"100% - 20px");
 	}
 }
 
