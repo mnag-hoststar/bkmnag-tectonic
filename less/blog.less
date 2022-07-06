@@ -143,6 +143,9 @@
 }
 
 .blog-list-footer {
+	display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
 	margin: 1em 0 2em;
 	padding: 0;
 	text-align: center;
@@ -192,7 +195,7 @@
 			padding-right: 6px;
 		}
 
-		&.paginate-newer {
+		&.paginate-newer:after {
 			content: '\003e';
 			position: relative;
 			padding-left: 6px;
